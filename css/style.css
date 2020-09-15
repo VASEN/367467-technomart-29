@@ -287,6 +287,8 @@ img {
 
 .account-form-link {
   color: var(--basic-blue);
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .account-form-link:hover,
@@ -594,6 +596,85 @@ img {
 .contacts-button {
   color: var(--white);
   border: none;
+}
+
+/* breadcrumbs */
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+
+  color: var(--black);
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+}
+
+.catalog-title {
+  background-color: var(--basic-background);
+}
+
+.filter-sort-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* catalog-content */
+
+.catalog-goods {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* paggination */
+
+.paggination {
+  margin: 0;
+  padding: 0;
+
+  color: var(--black);
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.paggination-link {
+  color: inherit;
+}
+
+.current-paggination {
+  background-color: var(--basic-red);
+}
+
+/* catalog-content-info */
+
+.catalog-content-info {
+  color: var(--black);
+
+  background-color: var(--basic-background);
+}
+
+.content-info-title {
+  color: inherit;
+}
+
+.content-info {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
 }
 
 /* footer */
