@@ -8,19 +8,30 @@
   --basic-darkblue: #293449;
   --basic-red: #EE3643;
   --basic-green: #63A63E;
-  --basic-greylight: #C5C5C5;
+  --basic-lightgray: #C5C5C5;
   --basic-background: #F1F5F7;
 
   --special-aquablue: #3BBCE3;
   --special-darkgreen: #367315;
   --special-lightgreen: #8ED78F;
   --special-lightorange: #FFC047;
-  --spesial-lilac: #DC91D8;
-  --spesial-orange: #FFBF47;
+  --special-lilac: #DC91D8;
+  --special-orange: #FFBF47;
+  --special-lightbrown: #F9F5F0;
+  --special-gray: #A9A9A9;
 
   --white-opacity: rgba(255, 255, 255, 0.5);
+  --white-opacity-25: rgba(255, 255, 255, 0.25);
+  --white-opacity-30: rgba(255, 255, 255, 0.3);
+  --gray-opacity-30: rgba(197, 197, 197, 0.3);
+  --brown-opacity-30: rgba(169, 169, 169, 0.3);
+  --black-opacity-24: rgba(0, 0, 0, 0.24);
 
-  --active-green: #63A63E;
+  --hover-red: #CA2C37;
+  --hover-green: #5FBB2D;
+  --hover-blue: #293449;
+
+  --active-green: #518534;
   --active-blue: #161D29;
   --active-red: #BA2732;
 }
@@ -31,7 +42,7 @@ body {
   padding: 0;
 
   color: var(--black);
-  font-family: "Cuprum", PT Sans, sans-serif;
+  font-family: "Cuprum", "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -48,6 +59,40 @@ img {
   height: auto;
 }
 
+.button {
+  color: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-color: var(--basic-red);
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--hover-red);
+}
+
+.button-active {
+  background-color: var(--active-red);
+}
+
+.section-wrapper {
+  background-color: var(--special-lightbrown);
+}
+
+.section-title {
+  color: var(--basic-blue);
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.section-button {
+  color: var(--white);
+}
+
 /* header-top */
 
 .header-top {
@@ -61,7 +106,7 @@ img {
 .header-logo:focus {
   /* Логотип сайта - простой текст!!! */
   background-color: var(--basic-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--black-opacity-24);
   /* Это может не работать в других браузерах!!! соотвественно лучше сюда запилить SVG */
   user-select: none;
 }
@@ -84,16 +129,20 @@ img {
   background-color: var(--active-blue);
 }
 
-.order-button,
-.order-button:hover,
-.order-button:focus {
+.order-button
+ {
   background-color: var(--basic-green);
 
   border: none;
 }
 
+.order-button:hover,
+.order-button:focus {
+  background-color: var(--hover-green);
+}
+
 .order-button:active {
-  background-color: var(--active-green);
+  background-color: var(--basic-green);
 }
 
 /* header-center */
@@ -136,7 +185,7 @@ img {
 }
 
 .login-button:active {
-  color: var(--basic-greylight);
+  color: var(--basic-lightgray);
 }
 
 /* header-bottom*/
@@ -149,7 +198,7 @@ img {
 
 .header-navigation {
   background-color: var(--basic-blue);
-  box-shadow: inset 0px -5px 0px #293449;
+  box-shadow: inset 0px -5px 0px var(--basic-darkblue);
 }
 
 .navigation-list {
@@ -170,4 +219,269 @@ img {
 
 .navigation-link:active {
   color: var(--white-opacity);
+}
+
+/* main-content */
+
+.features-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  color: var(--white);
+}
+
+.features-item:nth-child(1) {
+  background-color: var(--special-orange);
+}
+
+.features-item:nth-child(2) {
+  background-color: var(--special-aquablue);
+}
+
+.features-item:nth-child(3) {
+  background-color: var(--special-lilac);
+}
+
+.features-item:nth-child(4) {
+  background-color: var(--special-lightgreen);
+}
+
+.features-item:nth-child(5) {
+  background-color: var(--special-lightorange);
+}
+
+.item-title {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.features-button {
+  color: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  background-color: var(--white-opacity-30);
+}
+
+.features-button:hover,
+.features-button:focus {
+  background-color: var(--gray-opacity-30);
+}
+
+.features-button:active {
+  background-color: var(--brown-opacity-30);
+}
+
+/* features-slider */
+
+.features-slider {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  color: var(--white);
+
+  background-color: var(--basic-lightgray);
+}
+
+.slider-wrapper {
+  background-color: var(--white-opacity-25);
+}
+
+.slider-title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* populap-goods */
+
+.goods-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.goods-item {
+
+}
+
+.goods-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.old-price {
+  color: var(--special-gray);
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.price {
+  color: var(--white);
+  font-family: "PT Sans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  background-color: var(--basic-red);
+}
+
+.buy-button {
+  color: var(--white);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  border: none;
+  box-shadow: inset 0px -3px 0px var(--special-darkgreen);
+
+  background-color: var(--basic-green);
+}
+
+.buy-button:hover,
+.buy-button:focus {
+  background-color: var(--hover-green);
+}
+
+.buy-button:active {
+  background-color: var(--active-green);
+}
+
+.add-bookmark-button {
+  color: var(--basic-blue);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  border: none;
+
+  background: none;
+}
+
+.add-bookmark-button:hover,
+.add-bookmark-button:focus {
+  background: none;
+}
+
+.add-bookmark-button:active {
+  color: var(--basic-lightgray);
+}
+
+/* popular-brands */
+
+.brands-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+/* services */
+
+.services {
+  background-color: var(--basic-background);
+}
+
+.services-title {
+  color: var(--black);
+}
+
+.services-info {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.services-buttons {
+  margin: 0;
+  padding: 0;
+
+  list-style: 0;
+}
+
+.services-button {
+  color: var(--white);
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+
+  background-color: var(--basic-blue);
+  border: none;
+}
+
+.services-button:hover,
+.services-button:focus {
+  color: var(--white);
+
+  background-color: var(--hover-blue);
+}
+
+.current-service {
+  color: var(--basic-blue);
+
+  background-color: var(--white);
+}
+
+.services-slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.services-slider-info {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.services-slider-button {
+  color: var(--white);
+}
+
+/* about-us */
+.about-us-title {
+  color: var(--black);
+}
+
+.info-content {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.delivery-content {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.delivery-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about-us-button {
+  color: var(--white);
+}
+
+.contacts-content {
+  font-family: "PT Sans", sans-serif;
+  font-size: 13px;
+}
+
+.contacts-button {
+  color: var(--white);
+  border: none;
 }
