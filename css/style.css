@@ -56,7 +56,7 @@
 /* Переменные */
 
 :root {
-  /*  */
+
   --white: #FFFFFF;
   --black: #000000;
   --basic-blue: #32425C;
@@ -166,6 +166,7 @@ img {
 .header-logo:hover,
 .header-logo:focus {
   /* Логотип сайта - простой текст!!! */
+  color: var(--white);
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px var(--black-opacity-24);
   /* Это может не работать в других браузерах!!! соотвественно лучше сюда запилить SVG */
@@ -188,6 +189,10 @@ img {
   color: var(--white-opacity);
 
   background-color: var(--active-blue);
+}
+
+.full-header-button {
+  background-color: var(--basic-red);
 }
 
 .order-button
@@ -246,6 +251,50 @@ img {
 }
 
 .login-button:active {
+  color: var(--basic-lightgray);
+}
+
+.account {
+  font-size: 21px;
+  line-height: 21px;
+
+  background-color: var(--white);
+}
+
+.account:hover > .logout-button,
+.account:focus > .logout-button {
+  color: var(--basic-blue);
+}
+
+.account:active > .account-button {
+  color: var(--basic-lightgray);
+}
+
+.account-button {
+  color: var(--black);
+}
+
+.logout-button {
+  color: var(--basic-lightgray);
+}
+
+.account-form-menu {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.account-form-link {
+  color: var(--basic-blue);
+}
+
+.account-form-link:hover,
+.account-form-link:focus {
+  color: var(--basic-red);
+}
+
+.account-form-link:active {
   color: var(--basic-lightgray);
 }
 
@@ -559,6 +608,7 @@ img {
 .footer-logo:hover,
 .footer-logo:focus {
   /* Логотип сайта - простой текст!!! */
+  color: var(--white);
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px var(--black-opacity-24);
   /* Это может не работать в других браузерах!!! соотвественно лучше сюда запилить SVG */
