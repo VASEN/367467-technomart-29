@@ -1,0 +1,173 @@
+/* Переменные */
+
+:root {
+  /*  */
+  --white: #FFFFFF;
+  --black: #000000;
+  --basic-blue: #32425C;
+  --basic-darkblue: #293449;
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+
+  --special-aquablue: #3BBCE3;
+  --special-darkgreen: #367315;
+  --special-lightgreen: #8ED78F;
+  --special-lightorange: #FFC047;
+  --spesial-lilac: #DC91D8;
+  --spesial-orange: #FFBF47;
+
+  --white-opacity: rgba(255, 255, 255, 0.5);
+
+  --active-green: #63A63E;
+  --active-blue: #161D29;
+  --active-red: #BA2732;
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+
+  color: var(--black);
+  font-family: "Cuprum", PT Sans, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* header-top */
+
+.header-top {
+  color: var(--white);
+
+  background-color: var(--basic-darkblue);
+}
+
+.header-logo,
+.header-logo:hover,
+.header-logo:focus {
+  /* Логотип сайта - простой текст!!! */
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  /* Это может не работать в других браузерах!!! соотвественно лучше сюда запилить SVG */
+  user-select: none;
+}
+
+.header-logo:active {
+  background-color: var(--active-red);
+}
+
+/* Стили для формы поиска */
+
+.header-button,
+.header-button:hover,
+.header-button:focus {
+  color: inherit;
+}
+
+.header-button:active {
+  color: var(--white-opacity);
+
+  background-color: var(--active-blue);
+}
+
+.order-button,
+.order-button:hover,
+.order-button:focus {
+  background-color: var(--basic-green);
+
+  border: none;
+}
+
+.order-button:active {
+  background-color: var(--active-green);
+}
+
+/* header-center */
+
+.header-center {
+  background-color: var(--basic-background);
+}
+
+.header-promo {
+  color: var(--basic-red);
+  font-size: 16px;
+  line-height: 23px;
+  font-style: italic;
+}
+
+.header-phone {
+  color: var(--basic-red);
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.header-address {
+  color: var(--basic-blue);
+  font-size: 14px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.login-button {
+  color: var(--black);
+  font-size: 21px;
+  line-height: 21px;
+
+  background-color: var(--white);
+}
+
+.login-button:hover,
+.login-button:focus {
+  color: var(--basic-red);
+}
+
+.login-button:active {
+  color: var(--basic-greylight);
+}
+
+/* header-bottom*/
+
+.header-bottom {
+  color: var(--white);
+
+  background-color: var(--basic-background);
+}
+
+.header-navigation {
+  background-color: var(--basic-blue);
+  box-shadow: inset 0px -5px 0px #293449;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.navigation-link {
+  color: inherit;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  background-color: var(--basic-darkblue);
+}
+
+.navigation-link:active {
+  color: var(--white-opacity);
+}

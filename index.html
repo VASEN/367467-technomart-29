@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <title>Сайт интернет-магазина "Техномарт"</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="main-header">
       <div class="header-top">
         <a class="header-logo">ТЕХНОМАРТ</a>
           <!-- Здесь будет реализована форма поиска по странице -->
-        <a class="button bookmark-button" href="#">Закладки: <span>0</span></a>
-        <a class="button cart-button" href="#">Корзина: <span>0</span></a>
-        <button class="button order-button" type="button" name="order">Оформить заказ</button>
+        <a class="header-button bookmark-button" href="#">Закладки: <span>0</span></a>
+        <a class="header-button cart-button" href="#">Корзина: <span>0</span></a>
+        <button class="header-button order-button" type="button" name="order">Оформить заказ</button>
       </div>
       <div class="header-center">
         <p class="header-promo">Интернет-магазин строительных материалов  и инструментов для ремонта</p>
@@ -23,35 +23,37 @@
           <address class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="header-login">
-          <a class="login-link" href="#">Войти</a>
-          <a class="registration-link" href="#">Регистрация</a>
+          <a class="login-button login-link" href="#">Войти</a>
+          <a class="login-button registration-link" href="#">Регистрация</a>
         </div>
       </div>
-      <nav class="header-bottom header-navigation">
-        <ul class="navigation-list">
-          <li class="navigation-item">
-            <a class="navigation-link">Главная</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Компания</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="catalog.html">Каталог</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Новости</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Спецпредложения</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header-bottom">
+        <nav class="header-navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item">
+              <a class="navigation-link">Главная</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Компания</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Новости</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Спецпредложения</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="navigation-item">
+              <a class="navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main-content">
       <h1 class="visually-hidden">Главная страница интернет-магазина "Техномарт"</h1>
