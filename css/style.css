@@ -695,7 +695,7 @@ img {
   background-color: var(--special-brown);
 }
 
-.price-element > input[type="text"] {
+.price-element > input[type="number"] {
   font-family: "PT Sans", sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -705,6 +705,12 @@ img {
 
   border: none;
   border-radius: 2px;
+}
+
+.price-element > input[type=number]::-webkit-inner-spin-button,
+.price-element > input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .filter-brands-list,
