@@ -11,7 +11,10 @@
     <header>
       <div class="header-top">
         <a class="header-logo" href="index.html">ТЕХНОМАРТ</a>
-          <!-- Здесь будет реализована форма поиска по странице -->
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label for="search-field">Поиск</label>
+          <input class="search" type="search" name="search-field" placeholder="Поиск:" id="search-field">
+        </form>
         <a class="header-button bookmark-button" href="#">Закладки: <span>0</span></a>
         <a class="header-button cart-button full-header-button" href="#">Корзина: <span>10</span></a>
         <button class="header-button order-button" type="button" name="order">Оформить заказ</button>
@@ -83,12 +86,85 @@
       </ul>
       <h2 class="section-title catalog-title">Перфораторы</h2>
       <aside class="filter">
-        <h3 class="filter-sort-title">Фильтр:</h3>
-        <!-- Форма фильтра -->
+        <h3 class="filter-sort-title filter-title">Фильтр:</h3>
+        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="filter-section">
+            <legend class="filter-section-title">Цена:</legend>
+            <div class="price-range">
+              /* Здесь будут хитрые ползунки */
+            </div>
+            <p class="price-element">
+              <label for="min-price">Минимальная цена:</label>
+              <input type="text" name="min-price" value="0" id="min-price">
+            </p>
+            <span>-</span>
+            <p class="price-element">
+              <label for="max-price">Минимальная цена:</label>
+              <input type="text" name="max-price" value="30000" id="max-price">
+            </p>
+          </fieldset>
+          <fieldset class="filter-section">
+            <legend class="filter-section-title">Производители:</legend>
+            <ul class="filter-brands-list">
+              <li class="filter-brands-item">
+                <input type="checkbox" name="bosch" id="bosch" checked>
+                <label for="bosch">Bosch</label>
+              </li>
+              <li class="filter-brands-item">
+                <input type="checkbox" name="interscol" id="interscol">
+                <label for="interscol">Интерскол</label>
+              </li>
+              <li class="filter-brands-item">
+                <input type="checkbox" name="makita" id="makita" checked>
+                <label for="makita">Makita</label>
+              </li>
+              <li class="filter-brands-item">
+                <input type="checkbox" name="dewalt" id="dewalt">
+                <label for="dewalt">Dewalt</label>
+              </li>
+              <li class="filter-brands-item">
+                <input type="checkbox" name="hitachi" id="hitachi">
+                <label for="hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-section">
+            <legend class="filter-section-title">Питание:</legend>
+            <ul class="filter-energy-list">
+              <li class="filter-energy-item">
+                <input type="radio" name="energy-type" value="battery" id="battery" checked>
+                <label for="battery">Аккумуляторные</label>
+              </li>
+              <li class="filter-energy-item">
+                <input type="radio" name="energy-type" value="mains-lead" id="mains-lead">
+                <label for="mains-lead">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filter-button" type="submit" name="button">Показать</button>
+        </form>
       </aside>
       <div class="sort">
         <h3 class="filter-sort-title">Сортировка:</h3>
-        <!-- Форма сортировки -->
+        <ul class="sort-list">
+          <li class="sort-item">
+            <button class="sort-button current-sort" type="button" name="sort-price">По цене</button>
+          </li>
+          <li class="sort-item">
+            <button class="sort-button" type="button" name="sort-type">По типу</button>
+          </li>
+          <li class="sort-item">
+            <button class="sort-button" type="button" name="sort-function">По функционалу</button>
+          </li>
+        </ul>
+        <ul class="sort-list">
+          <li class="sort-item">
+            <button class="up-down-button sort-up current-up-down" type="button" name="button">По возрастанию</button>
+          </li>
+          <li class="sort-item">
+            <button class="up-down-button sort-down" type="button" name="button">По убыванию</button>
+          </li>
+        </ul>
       </div>
       <section class="catalog-content">
         <h3 class="visualli-hidden">Каталог перфораторов</h3>
@@ -252,5 +328,17 @@
         </p>
       </div>
     </footer>
+    <section class="modal cart-modal">
+      <h3 class="visually-hidden">Добавление товара в корзину</h3>
+      <p class="cart-event">Товар добавлен в корзину!</p>
+      <ul class="cart-footer">
+        <li>
+          <a class="button cart-button" href="#">Оформить заказ</a>
+        </li>
+        <li>
+          <a class="button cart-button continue-shopping" href="catalog.html">Продолжить покупки</a>
+        </li>
+      </ul>
+    </section>
   </body>
 </html>

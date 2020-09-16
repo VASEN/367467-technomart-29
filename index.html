@@ -11,7 +11,10 @@
     <header class="main-header">
       <div class="header-top">
         <a class="header-logo">ТЕХНОМАРТ</a>
-          <!-- Здесь будет реализована форма поиска по странице -->
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label for="search-field">Поиск</label>
+          <input class="search" type="search" name="search-field" placeholder="Поиск:" id="search-field">
+        </form>
         <a class="header-button bookmark-button" href="#">Закладки: <span>0</span></a>
         <a class="header-button cart-button" href="#">Корзина: <span>0</span></a>
         <button class="header-button order-button" type="button" name="order">Оформить заказ</button>
@@ -31,7 +34,7 @@
         <nav class="header-navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <a class="navigation-link">Главная</a>
+              <a class="navigation-link current-navigation">Главная</a>
             </li>
             <li class="navigation-item">
               <a class="navigation-link" href="#">Компания</a>
@@ -82,6 +85,16 @@
           </li>
         </ul>
         <!-- Слайдер -->
+        <form class="slider-form">
+          <input class="visually-hidden" type="radio" id="slider-radio-1" name="toggle" checked>
+          <input class="visually-hidden" type="radio" id="slider-radio-2" name="toggle">
+          <div class="slider-controls">
+            <label for="slider-radio-1">Слайдер 1</label>
+            <label for="slider-radio-2">Слайдер 2</label>
+          </div>
+          <button class="slider-button next-slide" type="button" name="next-button">Следующий слайд</button>
+          <button class="slider-button prev-slide" type="button" name="prev-button">Предыдущий слайд</button>
+        </form>
         <ol class="features-slider">
           <li class="slider-item">
             <div class="slider-wrapper">
@@ -305,5 +318,31 @@
         </p>
       </div>
     </footer>
+    <section class="modal feedback-modal">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="feedback-element">
+          <label for="feedback-name">Ваше имя:</label>
+          <input type="text" name="feedback-name" placeholder="Имя Фамилия" id="feedback-name">
+        </p>
+        <p class="feedback-element">
+          <label for="feedback-email">Ваш e-mail:</label>
+          <input type="email" name="feedback-email" placeholder="email@example.com" id="feedback-email">
+        </p>
+        <p class="feedback-element feedback-textarea">
+          <label for="feedback-text">Текст письма:</label>
+          <textarea name="feedback-text" rows="8" cols="80" placeholder="В свободной форме" id="feedback-text"></textarea>
+        </p>
+        <p class="feedback-footer">
+          <button class="button feedback-button" type="submit" name="feedback-button">Отправить</button>
+        </p>
+      </form>
+      <button type="button" name="close-modal">Закрыть</button>
+    </section>
+    <section class="modal map-modal">
+      <h2>Карта проезда</h2>
+      <img src="https://via.placeholder.com/943x449" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <button type="button" name="close-modal">Закрыть</button>
+    </section>
   </body>
 </html>
