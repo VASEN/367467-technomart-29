@@ -273,30 +273,137 @@
       </div>
     </section>
     <ul class="goods__list">
-      <li class="goods__item">
+      <li class="goods__item new-item">
         <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
         <del class="goods__price_old">22500 Р.</del>
         <span class="goods__price">15500 Р.</span>
-        <img src="img/BFG-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
+        <span class="goods__image">
+          <img src="img/BFG-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
+        </span>
       </li>
-      <li class="goods__item">
+      <li class="goods__item_hover-focus new-item">
         <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
         <del class="goods__price_old">22500 Р.</del>
         <span class="goods__price">15500 Р.</span>
-        <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-        <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
+        <button class="goods__button_buy" type="button" name="button_buy">Купить</button>
+        <button class="goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
       </li>
-      <li>
-        <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-        <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-        <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
+      <li class="goods__button_buy_states">
+        <button class="goods__button_buy_rest" type="button" name="button_buy">Купить</button>
+        <button class="goods__button_buy_hover-focus" type="button" name="button_buy">Купить</button>
+        <button class="goods__button_buy_active" type="button" name="button_buy">Купить</button>
       </li>
-      <li>
-        <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
-        <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
-        <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
+      <li class="goods__button_add-bookmark_states">
+        <button class="goods__button_add-bookmark_rest" type="button" name="button_add-bookmark">В закладки</button>
+        <button class="goods__button_add-bookmark_hover-focus" type="button" name="button_add-bookmark">В закладки</button>
+        <button class="goods__button_add-bookmark_active" type="button" name="button_add-bookmark">В закладки</button>
       </li>
     </ul>
+    <ul class="brands__list">
+      <li class="brands__item">
+        <a class="brands__link" href="#">
+          <img src="img/bosch.png" alt="Bosch" width="126" height="37">
+        </a>
+      </li>
+      <li class="brands__item_hover-focus">
+        <a class="brands__link" href="#">
+          <img src="img/bosch.png" alt="Bosch" width="126" height="37">
+        </a>
+      </li>
+      <li class="brands__item_active">
+        <a class="brands__link" href="#">
+          <img src="img/bosch.png" alt="Bosch" width="126" height="37">
+        </a>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="sort">
+        <h3 class="filter-sort__title">Сортировка:</h3>
+        <ul class="sort__list">
+          <li class="sort__item">
+            <button class="sort__button sort__button_current" type="button" name="sort__price">По цене</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button" type="button" name="sort__type">По типу</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button" type="button" name="sort__function">По функционалу</button>
+          </li>
+        </ul>
+        <ul class="sort__list sort__list_up-down">
+          <li class="sort__item">
+            <button class="sort__button_up-down sort__button_up sort__button_up-down_current" type="button" name="sort__button_up">По возрастанию</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button_up-down sort__button_down" type="button" name="sort__button_down">По убыванию</button>
+          </li>
+        </ul>
+      </div>
+      <div class="sort_rest">
+        <ul class="sort__list_rest">
+          <li class="sort__item">
+            <button class="sort__button" type="button" name="sort__price">По цене</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button" type="button" name="sort__type">По типу</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button" type="button" name="sort__function">По функционалу</button>
+          </li>
+        </ul>
+        <ul class="sort__list_rest sort__list_up-down_rest">
+          <li class="sort__item">
+            <button class="sort__button_up-down sort__button_up " type="button" name="sort__button_up">По возрастанию</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button_up-down sort__button_down" type="button" name="sort__button_down">По убыванию</button>
+          </li>
+        </ul>
+      </div>
+      <div class="sort_hover-focus">
+        <ul class="sort__list_hover-focus">
+          <li class="sort__item">
+            <button class="sort__button_hover-focus" type="button" name="sort__price">По цене</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button_hover-focus" type="button" name="sort__type">По типу</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button_hover-focus" type="button" name="sort__function">По функционалу</button>
+          </li>
+        </ul>
+        <ul class="sort__list_hover-focus sort__list_up-down_hover-focus">
+          <li class="sort__item">
+            <button class="sort__button_up-down_hover-focus sort__button_up" type="button" name="sort__button_up">По возрастанию</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button_up-down_hover-focus sort__button_down" type="button" name="sort__button_down">По убыванию</button>
+          </li>
+        </ul>
+      </div>
+      <div class="sort_active">
+        <ul class="sort__list_active">
+          <li class="sort__item">
+            <button class="sort__button_active" type="button" name="sort__price">По цене</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button_active" type="button" name="sort__type">По типу</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button_active" type="button" name="sort__function">По функционалу</button>
+          </li>
+        </ul>
+        <ul class="sort__list_active sort__list_up-down_active">
+          <li class="sort__item">
+            <button class="sort__button_up-down_active sort__button_up" type="button" name="sort__button_up">По возрастанию</button>
+          </li>
+          <li class="sort__item">
+            <button class="sort__button_up-down_active sort__button_down" type="button" name="sort__button_down">По убыванию</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
 
   </main>
   </body>
