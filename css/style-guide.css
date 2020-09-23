@@ -1362,8 +1362,7 @@ input[type="radio"].visually-hidden {
 }
 
 .goods__item {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
 
   border: 1px solid var(--basic-lightgray);
 }
