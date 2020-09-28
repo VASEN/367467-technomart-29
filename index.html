@@ -15,8 +15,8 @@
             <img class="header-top__link" src="img/logo-technomart.svg" alt="Интернет-магазина Техномарт" width="108" height="18">
           </a>
           <form class="header-top__search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="search-form__label" for="search-form__field"><span class="visually-hidden">Поиск</span></label>
             <input class="search-form__input" type="search" name="search-field" placeholder="Поиск:" id="search-form__field">
+            <label class="search-form__label" for="search-form__field">Поиск</label>
           </form>
           <a class="header-top__button header-top__button-bookmark" href="#">Закладки: <span>0</span></a>
           <a class="header-top__button header-top__button-cart" href="#">Корзина: <span>0</span></a>
@@ -77,49 +77,48 @@
             <div class="features__item new-item">
               <div class="features__item-wrapper">
                 <h3 class="features__item-title">Материалы</h3>
-                <a class="features__button" href="#">На любой вкус</a>
+                <button class="features__button" type="button">На любой вкус</button>
               </div>
               <img src="img/icon-1.svg" width="44" height="65" alt="Материалы">
             </div>
             <div class="features__item">
               <div class="features__item-wrapper">
                 <h3 class="features__item-title">Инструмент</h3>
-                <a class="features__button" href="#">На все случаи</a>
+                <button class="features__button" type="button">На все случаи</button>
               </div>
               <img src="img/icon-2.svg" width="75" height="61" alt="Инструмент">
             </div>
             <div class="features__item">
               <div class="features__item-wrapper">
                 <h3 class="features__item-title">Техника</h3>
-                <a class="features__button" href="#">Для стройки</a>
+                <button class="features__button" type="button">Для стройки</button>
               </div>
               <img src="img/icon-3.svg" width="78" height="62" alt="Техника">
             </div>
             <div class="features__item">
               <div class="features__item-wrapper">
                 <h3 class="features__item-title">Скидки 50%</h3>
-                <a class="features__button" href="#">На 350 товаров</a>
+                <button class="features__button" type="button">На 350 товаров</button>
               </div>
               <img src="img/icon-4.svg" width="59" height="72" alt="Скидки 50%">
             </div>
             <div class="features__item">
               <div class="features__item-wrapper">
                 <h3 class="features__item-title">Доставка</h3>
-                <a class="features__button" href="#">Бесплатно</a>
+                <button class="features__button" type="button">Бесплатно</button>
               </div>
               <img src="img/icon-5.svg" width="78" height="63" alt="Доставка">
             </div>
-            <div class="features__slider-item">
+            <div class="features__slider">
               <input class="visually-hidden" type="radio" id="slider__radio_1" name="toggle" checked>
               <input class="visually-hidden" type="radio" id="slider__radio_2" name="toggle">
               <div class="slider-controls">
                 <label for="slider__radio_1">Слайдер 1</label>
                 <label for="slider__radio_2">Слайдер 2</label>
               </div>
-              <button class="slider__button slider__button_next" type="button" name="button_next">Следующий слайд</button>
-              <button class="slider__button slider__button_prev" type="button" name="button_prev">Предыдущий слайд</button>
-              <div class="features__slider">
+              <div class="features__slider-list">
                 <div class="slider__item slider__item_1" id="slide-1">
+                  <img src="img/features__slider-1.jpg" width="620" height="266" alt="Перфораторы">
                   <div class="slider__wrapper">
                     <h3 class="slider__title">Перфораторы</h3>
                     <p class="slider__info">Настоящие мужские игрушки</p>
@@ -127,12 +126,15 @@
                   <a class="button slider__link" href="catalog.html">Открыть каталог</a>
                 </div>
                 <div class="slider__item slider__item_2" id="slide-2">
+                  <img src="img/features__slider-2.jpg" width="620" height="266" alt="Дрели">
                   <div class="slider__wrapper">
                     <h3 class="slider__title">Дрели</h3>
                     <p class="slider__info">Соседям на радость!</p>
                   </div>
                   <a class="button slider__link" href="catalog.html">Открыть каталог</a>
                 </div>
+                <button class="slider__button slider__button_next" type="button" name="button_next">Следующий слайд</button>
+                <button class="slider__button slider__button_prev" type="button" name="button_prev">Предыдущий слайд</button>
               </div>
             </div>
           </div>
@@ -146,58 +148,58 @@
           </div>
           <ul class="goods__list">
             <li class="goods__item">
-              <div class="goods__item-wrapper">
-                <div class="goods__info">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 9000</h3>
-                  <del class="goods__price_old">32500 Р.</del>
-                  <span class="goods__price">25500 Р.</span>
-                </div>
+              <div class="goods__image-wrapper">
                 <img src="img/BFG-9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
-                <div class="goods__button-wrapper">
-                  <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-                  <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
-                </div>
+              </div>
+              <div class="goods__info-wrapper">
+                <h3 class="goods__title">Перфоратор BOSCH BFG 9000</h3>
+                <del class="goods__price_old">32500 Р.</del>
+                <span class="goods__price">25500 Р.</span>
+              </div>
+              <div class="goods__button-wrapper">
+                <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
+                <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
               </div>
             </li>
-            <li class="goods__item">
-              <div class="goods__item-wrapper">
-                <div class="goods__info">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
-                  <del class="goods__price_old">22500 Р.</del>
-                  <span class="goods__price">15500 Р.</span>
-                </div>
+            <li class="goods__item new-item">
+              <div class="goods__image-wrapper">
                 <img src="img/BFG-3000.jpg" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
-                <div class="goods__button-wrapper">
-                  <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-                  <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
-                </div>
+              </div>
+              <div class="goods__info-wrapper">
+                <h3 class="goods__title">Перфоратор BOSCH BFG 3000</h3>
+                <del class="goods__price_old">22500 Р.</del>
+                <span class="goods__price">15500 Р.</span>
+              </div>
+              <div class="goods__button-wrapper">
+                <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
+                <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
               </div>
             </li>
             <li class="goods__item">
-              <div class="goods__item-wrapper">
-                <div class="goods__info">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 6000</h3>
-                  <del class="goods__price_old">30500 Р.</del>
-                  <span class="goods__price">25500 Р.</span>
-                </div>
+              <div class="goods__image-wrapper">
                 <img src="img/BFG-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
-                <div class="goods__button-wrapper">
-                  <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-                  <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
-                </div>
+              </div>
+              <div class="goods__info-wrapper">
+                <h3 class="goods__title">Перфоратор BOSCH BFG 6000</h3>
+                <del class="goods__price_old">30500 Р.</del>
+                <span class="goods__price">25500 Р.</span>
+              </div>
+              <div class="goods__button-wrapper">
+                <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
+                <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
               </div>
             </li>
-            <li class="goods__item">
-              <div class="goods__item-wrapper">
-                <div class="goods__info">
-                  <h3 class="goods__title">Перфоратор BOSCH BFG 2000</h3>
-                  <span class="goods__price">12500 Р.</span>
-                </div>
+            <li class="goods__item new-item">
+              <div class="goods__image-wrapper">
                 <img src="img/BFG-2000.jpg" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
-                <div class="goods__button-wrapper">
-                  <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-                  <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
-                </div>
+              </div>
+              <div class="goods__info-wrapper">
+                <h3 class="goods__title">Перфоратор BOSCH BFG 2000</h3>
+                <span class="goods__price">12500 Р.</span>
+              </div>
+              <div class="goods__button-wrapper">
+                <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
+                <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
               </div>
             </li>
           </ul>
@@ -381,25 +383,30 @@
       </div>
     </footer>
     <section class="modal modal-feedback">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
-        <p class="feedback__element">
-          <label for="feedback__name">Ваше имя:</label>
-          <input type="text" name="feedback__name" placeholder="Имя Фамилия" id="feedback__name">
-        </p>
-        <p class="feedback__element">
-          <label for="feedback__email">Ваш e-mail:</label>
-          <input type="email" name="feedback__email" placeholder="email@example.com" id="feedback__email">
-        </p>
-        <p class="feedback__element feedback-textarea">
-          <label for="feedback__text">Текст письма:</label>
-          <textarea name="feedback__text" rows="8" cols="80" placeholder="В свободной форме" id="feedback__text"></textarea>
-        </p>
-        <p class="feedback__footer">
-          <button class="button feedback__button" type="submit" name="feedback-button">Отправить</button>
-        </p>
-      </form>
-      <button class="modal__button_close" type="button" name="modal__button_close">Закрыть</button>
+      <div class="container">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="feedback__form-wrapper">
+            <p class="feedback__element">
+              <label for="feedback__name">Ваше имя:</label>
+              <input type="text" name="feedback__name" placeholder="Имя Фамилия" id="feedback__name">
+            </p>
+            <p class="feedback__element">
+              <label for="feedback__email">Ваш e-mail:</label>
+              <input type="email" name="feedback__email" placeholder="email@example.com" id="feedback__email">
+            </p>
+            <p class="feedback__element feedback-textarea">
+              <label for="feedback__text">Текст письма:</label>
+              <textarea name="feedback__text" rows="8" cols="70" placeholder="В свободной форме" id="feedback__text"></textarea>
+            </p>
+          </div>
+          <p class="feedback__footer">
+            <button class="button feedback__button" type="submit" name="feedback-button">Отправить</button>
+          </p>
+        </form>
+        <button class="modal__button_close" type="button" name="modal__button_close">Закрыть</button>
+      </div>
+
     </section>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта проезда</h2>
