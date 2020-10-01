@@ -449,7 +449,7 @@ input[type="checkbox"].visually-hidden {
   align-items: start;
 }
 
-.login__button {
+.login-form__button {
   position: relative;
   padding: 12px 27px 12px 45px;
 
@@ -460,16 +460,16 @@ input[type="checkbox"].visually-hidden {
   background-color: var(--white);
 }
 
-.login__button:hover,
-.login__button:focus {
+.login-form__button:hover,
+.login-form__button:focus {
   color: var(--basic-red);
 }
 
-.login__button:active {
+.login-form__button:active {
   color: var(--basic-lightgray);
 }
 
-.login__button-link::before {
+.login-form__button-link::before {
   content: "";
 
   position: absolute;
@@ -482,16 +482,16 @@ input[type="checkbox"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-.login__button-link:hover::before,
-.login__button-link:focus::before {
+.login-form__button-link:hover::before,
+.login-form__button-link:focus::before {
   background-image: url("../img/icon-login_gray.svg");
 }
 
-.login__button-link:active::before {
+.login-form__button-link:active::before {
   background-image: url("../img/icon-login.svg");
 }
 
-.login__button-registration {
+.login-form__button-registration {
   padding: 12px 24px;
 }
 
@@ -798,7 +798,7 @@ input[type="checkbox"].visually-hidden {
   position: relative;
 }
 
-.slider-controls {
+.features-slider__controls {
   position: absolute;
 
   left: 310px;
@@ -807,7 +807,7 @@ input[type="checkbox"].visually-hidden {
   line-height: 0;
 }
 
-.slider-controls > label {
+.features-slider__controls > label {
   position: relative;
   display: inline-block;
 
@@ -825,7 +825,7 @@ input[type="checkbox"].visually-hidden {
   box-sizing: border-box;
 }
 
-.slider-controls > label:first-child {
+.features-slider__controls > label:first-child {
   margin-left: 0;
 }
 
@@ -834,8 +834,8 @@ input[type="checkbox"].visually-hidden {
   display: block;
 }
 
-#slider__radio_1:checked ~.slider-controls label[for="slider__radio_1"]:after,
-#slider__radio_2:checked ~.slider-controls label[for="slider__radio_2"]:after {
+#slider__radio_1:checked ~.features-slider__controls label[for="slider__radio_1"]:after,
+#slider__radio_2:checked ~.features-slider__controls label[for="slider__radio_2"]:after {
     content: "";
 
     position: absolute;
@@ -847,7 +847,7 @@ input[type="checkbox"].visually-hidden {
     border-radius: 50%;
 }
 
-.slider__button {
+.features-slider__button {
   margin: 0;
   padding: 0;
 
@@ -857,7 +857,7 @@ input[type="checkbox"].visually-hidden {
   border: none;
 }
 
-.slider__button_next:before {
+.features-slider__button_next:before {
   content: "";
 
   position: absolute;
@@ -873,7 +873,7 @@ input[type="checkbox"].visually-hidden {
   transform: rotate(180deg);
 }
 
-.slider__button_prev:before {
+.features-slider__button_prev:before {
   content: "";
 
   position: absolute;
@@ -891,11 +891,11 @@ input[type="checkbox"].visually-hidden {
   color: var(--white);
 }
 
-.slider__wrapper {
+.slider-item__wrapper {
   margin-bottom: 113px;
 }
 
-.slider__item {
+.features-slider__item {
   display: none;
   max-width: 620px;
 
@@ -905,17 +905,17 @@ input[type="checkbox"].visually-hidden {
   box-sizing: border-box;
 }
 
-.slider__item_1 {
+.features-slider__item_1 {
   background-image: url("../img/features__slider-1.jpg");
   background-repeat: no-repeat;
 }
 
-.slider__item_2 {
+.features-slider__item_2 {
   background-image: url("../img/features__slider-2.jpg");
   background-repeat: no-repeat;
 }
 
-.slider__title {
+.slider-item__title {
   margin: 0 0 5px 0;
 
   font-size: 36px;
@@ -924,11 +924,11 @@ input[type="checkbox"].visually-hidden {
   text-transform: uppercase;
 }
 
-.slider__info {
+.slider-item__info {
   margin: 0;
 }
 
-.slider__link {
+.slider-item__link {
   display: inline-block;
 
   margin: 0;
@@ -1561,7 +1561,7 @@ input[type="checkbox"].visually-hidden {
   line-height: 24px;
 }
 
-.services__wrapper {
+.services__slider {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 20px;
@@ -1764,7 +1764,7 @@ input[type="checkbox"].visually-hidden {
   color: inherit;
 }
 
-.footer-subnavigation__list {
+.footer-subnavigation {
   display: flex;
   flex-wrap: wrap;
   align-self: end;
@@ -1818,7 +1818,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
 }
 
-.social__list {
+.social {
   display: flex;
   flex-wrap: wrap;
 

@@ -14,7 +14,7 @@
           <a class="header-top__logo">
             <img class="header-top__link" src="img/logo-technomart.svg" alt="Интернет-магазина Техномарт" width="108" height="18">
           </a>
-          <form class="header-top__search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="header-top__search-form search-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="search-form__input" type="search" name="search-field" placeholder="Поиск:" id="search-form__field">
             <label class="search-form__label" for="search-form__field">Поиск</label>
           </form>
@@ -30,9 +30,9 @@
             <a class="header-center__contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <address class="header-center__contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
-          <div class="header-center__login">
-            <a class="login__button login__button-link" href="#">Войти</a>
-            <a class="login__button login__button-registration" href="#">Регистрация</a>
+          <div class="header-center__login-form login-form">
+            <a class="login-form__button login-form__button-link" href="#">Войти</a>
+            <a class="login-form__button login-form__button-registration" href="#">Регистрация</a>
           </div>
         </div>
       </div>
@@ -109,42 +109,42 @@
               </div>
               <img src="img/icon-5.svg" width="78" height="63" alt="Доставка">
             </div>
-            <div class="features__slider">
+            <div class="features__slider features-slider">
               <input class="visually-hidden" type="radio" id="slider__radio_1" name="toggle" checked>
               <input class="visually-hidden" type="radio" id="slider__radio_2" name="toggle">
-              <div class="slider-controls">
+              <div class="features-slider__controls">
                 <label for="slider__radio_1">Слайдер 1</label>
                 <label for="slider__radio_2">Слайдер 2</label>
               </div>
-              <div class="features__slider-list">
-                <div class="slider__item slider__item_1" id="slide-1">
+              <div class="features-slider__list">
+                <div class="features-slider__item slider-item" id="slide-1">
                   <img src="img/features__slider-1.jpg" width="620" height="266" alt="Перфораторы">
-                  <div class="slider__wrapper">
-                    <h3 class="slider__title">Перфораторы</h3>
-                    <p class="slider__info">Настоящие мужские игрушки</p>
+                  <div class="slider-item__wrapper">
+                    <h3 class="slider-item__title">Перфораторы</h3>
+                    <p class="slider-item__info">Настоящие мужские игрушки</p>
                   </div>
-                  <a class="button slider__link" href="catalog.html">Открыть каталог</a>
+                  <a class="button slider-item__link" href="catalog.html">Открыть каталог</a>
                 </div>
-                <div class="slider__item slider__item_2" id="slide-2">
+                <div class="features-slider__item slider-item" id="slide-2">
                   <img src="img/features__slider-2.jpg" width="620" height="266" alt="Дрели">
-                  <div class="slider__wrapper">
-                    <h3 class="slider__title">Дрели</h3>
-                    <p class="slider__info">Соседям на радость!</p>
+                  <div class="slider-item__wrapper">
+                    <h3 class="slider-item__title">Дрели</h3>
+                    <p class="slider-item__info">Соседям на радость!</p>
                   </div>
-                  <a class="button slider__link" href="catalog.html">Открыть каталог</a>
+                  <a class="button slider-item__link" href="catalog.html">Открыть каталог</a>
                 </div>
-                <button class="slider__button slider__button_next" type="button" name="button_next">Следующий слайд</button>
-                <button class="slider__button slider__button_prev" type="button" name="button_prev">Предыдущий слайд</button>
+                <button class="features-slider__button features-slider__button_next" type="button" name="button_next">Следующий слайд</button>
+                <button class="features-slider__button features-slider__button_prev" type="button" name="button_prev">Предыдущий слайд</button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="popular-goods">
+      <section class="goods">
         <div class="container">
-          <div class="section__wrapper">
-            <h2 class="section__title">Популярные товары:</h2>
-            <a class="button section__button" href="catalog.html">Все популярные товары</a>
+          <div class="goods-header">
+            <h2 class="goods-header__title">Популярные товары:</h2>
+            <a class="button goods-header__button" href="catalog.html">Все популярные товары</a>
           </div>
           <ul class="goods__list">
             <li class="goods__item">
@@ -204,13 +204,12 @@
             </li>
           </ul>
         </div>
-
       </section>
-      <section class="popular-brands">
+      <section class="brands">
         <div class="container">
-          <div class="section__wrapper">
-            <h2 class="section__title">Популярные производители:</h2>
-            <a class="button section__button" href="#">Все производители</a>
+          <div class="brands-header">
+            <h2 class="brands-header__title">Популярные производители:</h2>
+            <a class="button brands-header__button" href="#">Все производители</a>
           </div>
           <ul class="brands__list">
             <li class="brands__item">
@@ -258,9 +257,9 @@
       </section>
       <section class="services">
         <div class="container">
-          <h2 class="section__title services__title">Сервисы</h2>
+          <h2 class="services__title">Сервисы</h2>
           <p class="services__info">Хороший интернет-магазин отличается от плохого не только ценами! <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <div class="services__wrapper">
+          <div class="services__slider services-slider">
             <div class="services-buttons">
               <span class="services-buttons_shadow"></span>
               <button class="services__button services__button_current" type="button" name="services__button_delivery">Доставка</button>
@@ -270,15 +269,15 @@
             <!-- Слайдеры -->
             <ul class="services-slider__list">
               <li class="services-slider__item">
-                <h3 class="section__title services-slider__title">Доставка</h3>
+                <h3 class="services-slider__title">Доставка</h3>
                 <p class="services-slider__info">Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!</p>
               </li>
               <li class="services-slider__item">
-                <h3 class="section__title services-slider__title">Гарантия</h3>
+                <h3 class="services-slider__title">Гарантия</h3>
                 <p class="services-slider__info">Если купленный у нас товар поломается или заискрит,<br> а также в случае пожара, спровоцированного его<br> возгоранием,  вы всегда можете быть уверены в нашей<br> гарантии. Мы обменяем сгоревший товар на новый.<br>Дом уж восстановите как-нибудь сами.</p>
               </li>
               <li class="services-slider__item">
-                <h3 class="section__title services-slider__title">Кредит</h3>
+                <h3 class="services-slider__title">Кредит</h3>
                 <p class="services-slider__info services-slider__info_credit">Залезть в долговую яму стало проще!<br>Кредитные консультанты придут вам на помощь.</p>
                 <a class="button services-slider__button" href="#">Отправить заявку</a>
               </li>
@@ -289,18 +288,18 @@
       <section class="about-us">
         <div class="container">
           <div class="about-us__info">
-            <h2 class="section__title about-us__title">Компания "Техномарт"</h2>
+            <h2 class="about-us__title">Компания «Техномарт»</h2>
             <p class="about-us__content">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br> ремонта и строительства не оставит равнодушными любителей сэкономить на<br> гастарбайтерах</p>
-            <p class="about-us__content-delivery">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
-            <ul class="delivery__list">
-              <li class="delivery__item">Деловые линии</li>
-              <li class="delivery__item">Автотрейдинг</li>
-              <li class="delivery__item">ЖелДорЭкспедиция</li>
+            <p class="about-us__delivery">Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:</p>
+            <ul class="delivery-list">
+              <li class="delivery-list__item">Деловые линии</li>
+              <li class="delivery-list__item">Автотрейдинг</li>
+              <li class="delivery-list__item">ЖелДорЭкспедиция</li>
             </ul>
             <a class="button about-us__button" href="#">Подробнее о компании</a>
           </div>
           <div class="about-us__contacts">
-            <h2 class="section__title about-us__title">Контакты</h2>
+            <h2 class="about-us__title">Контакты</h2>
             <p class="about-us__content">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
             <img src="img/mini_map.png" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
             <button class="button about-us__button" type="button" name="contacts-buttons">Заблудились? Напишите нам!</button>
@@ -341,7 +340,7 @@
             <address class="footer-center__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             <a class="footer-center__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           </div>
-          <ul class="footer-subnavigation__list">
+          <ul class="footer-subnavigation">
             <li class="footer-subnavigation__item">
               <a class="footer-subnavigation__link" href="#">Материалы</a>
             </li>
@@ -360,7 +359,7 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
-          <ul class="social__list">
+          <ul class="social">
             <li class="social__item">
               <a class="social__button social__button_vk" href="#">Вконтакте</a>
             </li>
@@ -385,23 +384,23 @@
     <section class="modal modal-feedback">
       <div class="container">
         <h2 class="visually-hidden">Форма обратной связи</h2>
-        <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
-          <div class="feedback__form-wrapper">
-            <p class="feedback__element">
+        <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="feedback-form__wrapper">
+            <p class="feedback-form__element">
               <label for="feedback__name">Ваше имя:</label>
               <input type="text" name="feedback__name" placeholder="Имя Фамилия" id="feedback__name">
             </p>
-            <p class="feedback__element">
+            <p class="feedback-form__element">
               <label for="feedback__email">Ваш e-mail:</label>
               <input type="email" name="feedback__email" placeholder="email@example.com" id="feedback__email">
             </p>
-            <p class="feedback__element feedback-textarea">
+            <p class="feedback-form__element feedback-textarea">
               <label for="feedback__text">Текст письма:</label>
               <textarea name="feedback__text" rows="8" cols="70" placeholder="В свободной форме" id="feedback__text"></textarea>
             </p>
           </div>
-          <p class="feedback__footer">
-            <button class="button feedback__button" type="submit" name="feedback-button">Отправить</button>
+          <p class="feedback-form__footer">
+            <button class="button feedback-form__button" type="submit" name="feedback-button">Отправить</button>
           </p>
         </form>
         <button class="modal__button_close" type="button" name="modal__button_close">Закрыть</button>
