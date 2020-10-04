@@ -14,9 +14,10 @@
           <a class="header-top__logo" href="index.html">
             <img class="header-top__link" src="img/logo-technomart.svg" alt="Интернет-магазина Техномарт" width="108" height="18">
           </a>
-          <form class="header-top__search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <input class="search-form__input" type="search" name="search-form__field" placeholder="Поиск:" id="search-form__field">
-            <label class="search-form__label" for="search-form__field">Поиск</label>
+          <form class="header-top__search-form search-form" action="https://echo.htmlacademy.ru/" method="post">
+            <input class="search-form__input" type="search" name="search-field" placeholder="Поиск:" id="search-form__field">
+            <label class="visually-hidden" for="search-form__field">Поиск</label>
+            <svg class="search-form__icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" fill="#fff"/></svg>
           </form>
           <a class="header-top__button header-top__button-bookmark" href="#">Закладки: <span>0</span></a>
           <a class="header-top__button header-top__button-cart header-top__button-cart_full" href="#">Корзина: <span>10</span></a>
@@ -30,7 +31,7 @@
             <a class="header-center__contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <address class="header-center__contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
-          <div class="header-center__account-wrapper">
+          <div class="header-center__account account">
             <div class="account__info">
               <a class="account__button account__button_user" href="#">Равшан Джамшутович</a>
               <a class="account__button account__button_logout" href="#">Выход</a>
@@ -94,13 +95,13 @@
             <a class="breadcrumbs__link breadcrumbs__link_current">Перфораторы</a>
           </li>
         </ul>
-        <h2 class="section__title catalog__title">Перфораторы</h2>
+        <h2 class="main-content__title">Перфораторы</h2>
         <div class="main-content__wrapper">
           <aside class="filter">
-            <h3 class="filter-sort__title filter__title">Фильтр:</h3>
+            <h3 class="filter__title">Фильтр:</h3>
             <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
-              <fieldset class="filter__section">
-                <legend class="filter__section_title">Цена:</legend>
+              <fieldset class="filter-section">
+                <legend class="filter-section__title">Цена:</legend>
                 <div class="price-range">
                   <div class="range">
                     <div class="current-range">
@@ -109,45 +110,65 @@
                     </div>
                   </div>
                 </div>
-                <div class="price-element__wrapper">
-                  <p class="price-element">
+                <div class="price">
+                  <p class="price__element">
                     <label class="visually-hidden" for="min-price">Минимальная цена:</label>
                     <input type="number" name="min-price" value="0" id="min-price">
                   </p>
                   <span>-</span>
-                  <p class="price-element">
+                  <p class="price__element">
                     <label class="visually-hidden" for="max-price">Минимальная цена:</label>
                     <input type="number" name="max-price" value="30000" id="max-price">
                   </p>
                 </div>
               </fieldset>
-              <fieldset class="filter__section">
-                <legend class="filter__section_title">Производители:</legend>
+              <fieldset class="filter-section filter-brands">
+                <legend class="filter-section__title">Производители:</legend>
                 <ul class="filter-brands__list">
                   <li class="filter-brands__item">
                     <input class="visually-hidden" type="checkbox" name="filter-brands__bosch" id="filter-brands__bosch" checked>
-                    <label for="filter-brands__bosch"><span class="checked"></span>Bosch</label>
+                    <label for="filter-brands__bosch">Bosch</label>
+                    <svg class="checked" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z" fill="#C5C5C5"/>
+                      <path d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z" fill="#C5C5C5"/>
+                    </svg>
                   </li>
                   <li class="filter-brands__item">
                     <input class="visually-hidden" type="checkbox" name="filter-brands__interscol" id="filter-brands__interscol">
-                    <label for="filter-brands__interscol"><span class="checked"></span>Интерскол</label>
+                    <label for="filter-brands__interscol">Интерскол</label>
+                    <svg class="checked" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z" fill="#C5C5C5"/>
+                      <path d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z" fill="#C5C5C5"/>
+                    </svg>
                   </li>
                   <li class="filter-brands__item">
                     <input class="visually-hidden" type="checkbox" name="filter-brands__makita" id="filter-brands__makita" checked>
-                    <label for="filter-brands__makita"><span class="checked"></span>Makita</label>
+                    <label for="filter-brands__makita">Makita</label>
+                    <svg class="checked" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z" fill="#C5C5C5"/>
+                      <path d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z" fill="#C5C5C5"/>
+                    </svg>
                   </li>
                   <li class="filter-brands__item">
                     <input class="visually-hidden" type="checkbox" name="filter-brands__dewalt" id="filter-brands__dewalt">
-                    <label for="filter-brands__dewalt"><span class="checked"></span>Dewalt</label>
+                    <label for="filter-brands__dewalt">Dewalt</label>
+                    <svg class="checked" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z" fill="#C5C5C5"/>
+                      <path d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z" fill="#C5C5C5"/>
+                    </svg>
                   </li>
                   <li class="filter-brands__item">
                     <input class="visually-hidden" type="checkbox" name="filter-brands__hitachi" id="filter-brands__hitachi">
-                    <label for="filter-brands__hitachi"><span class="checked"></span>Hitachi</label>
+                    <label for="filter-brands__hitachi">Hitachi</label>
+                    <svg class="checked" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.28499 7.48598L4.45599 10.315L12.239 18.098L26.171 4.16598L23.343 1.33698L12.239 12.439L7.28499 7.48598Z" fill="#C5C5C5"/>
+                      <path d="M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z" fill="#C5C5C5"/>
+                    </svg>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter__section">
-                <legend class="filter__section_title">Питание:</legend>
+              <fieldset class="filter-section filter-energy">
+                <legend class="filter-section__title">Питание:</legend>
                 <ul class="filter-energy__list">
                   <li class="filter-energy__item">
                     <input class="visually-hidden" type="radio" name="filter-energy__type" value="battery" id="radio-1" checked>
@@ -164,8 +185,8 @@
           </aside>
           <section class="sort">
             <div class="sort__menu-wrapper">
-              <h3 class="filter-sort__title">Сортировка:</h3>
-              <div class="sort-types__wrapper">
+              <h3 class="sort__title">Сортировка:</h3>
+              <div class="sort__types-wrapper">
                 <div class="sort__item">
                   <button class="sort__button sort__button_current" type="button" name="sort__price">По цене</button>
                 </div>
@@ -186,9 +207,9 @@
               </div>
             </div>
           </section>
-          <section class="catalog-content">
+          <section class="goods">
             <h3 class="visually-hidden">Каталог перфораторов</h3>
-            <ul class="catalog__goods">
+            <ul class="goods__list">
               <li class="goods__item">
                 <div class="goods__image-wrapper">
                   <img src="img/BFG-6000.jpg" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
@@ -337,7 +358,7 @@
       </div>
       <section class="catalog-info">
         <div class="container">
-          <h3 class="section__title catalog-info__title">Пара слов о перфораторах</h3>
+          <h3 class="catalog-info__title">Пара слов о перфораторах</h3>
           <p class="catalog-info__text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В<br> ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </section>

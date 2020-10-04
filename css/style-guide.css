@@ -1156,7 +1156,7 @@ input[type="checkbox"].visually-hidden {
   text-transform: uppercase;
 }
 
-.sort-types__wrapper {
+.sort__types-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
