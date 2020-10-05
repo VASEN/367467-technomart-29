@@ -451,7 +451,7 @@ input[type="checkbox"].visually-hidden {
 /* HEADER-CENTER */
 
 .header-center {
-  margin-bottom: 68px;
+  margin-bottom: 40px;
 }
 
 .header-center .container {
@@ -1888,6 +1888,7 @@ input[type="checkbox"].visually-hidden {
   border-radius: 3px;
   box-sizing: border-box;
 }
+
 
 .filter-brands__item > input[type="checkbox"]:checked ~ label::before {
   display: none;
