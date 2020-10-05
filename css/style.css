@@ -1519,7 +1519,7 @@ input[type="checkbox"].visually-hidden {
 .about-us .container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 40px;
 }
 
 .about-us__title {
@@ -1585,6 +1585,10 @@ input[type="checkbox"].visually-hidden {
   color: var(--white);
 
   border: none;
+}
+
+.about-us__button_contacts {
+  width: 100%;
 }
 
 .about-us__contacts > img {
