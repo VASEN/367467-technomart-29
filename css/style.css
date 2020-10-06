@@ -268,16 +268,19 @@ input[type="checkbox"].visually-hidden {
 }
 
 .header-top .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 220px auto 450px;
+  grid-template-areas:
+    "logo search buttons";
 }
 
 .header-top__logo,
 .header-top__logo:hover,
 .header-top__logo:focus {
-  position: relative;
+  grid-area: logo;
+  align-self: center;
 
+  position: relative;
   padding: 12px 57px 12px 55px;
 
   color: var(--white);
@@ -305,7 +308,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .search-form {
-  flex-grow: 1;
+  grid-area: search;
+  align-self: center;
   position: relative;
 }
 
@@ -355,9 +359,12 @@ input[type="checkbox"].visually-hidden {
 }
 
 .header-top__buttons-wrapper {
+  grid-area: buttons;
   display: flex;
   flex-wrap: wrap;
-  justify-content: end;
+  justify-content: flex-end;
+
+  max-width: 450px;
 }
 
 .header-top__button {
@@ -591,6 +598,8 @@ input[type="checkbox"].visually-hidden {
 
 .account__info {
   display: flex;
+  flex-wrap: wrap;
+  min-width: 300px;
 
   font-size: 21px;
   line-height: 21px;
