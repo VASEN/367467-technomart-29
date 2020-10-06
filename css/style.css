@@ -1065,6 +1065,7 @@ input[type="checkbox"].visually-hidden {
 
 .goods__header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
 
@@ -1293,18 +1294,18 @@ input[type="checkbox"].visually-hidden {
 
 .brands-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: start;
 
   margin-bottom: 20px;
-  padding-right: 14px;
 
   background-color: var(--special-lightbrown);
 }
 
 .brands-header__title {
   margin: 0;
-  padding: 29px 0 30px 28px;
+  padding: 29px 28px 30px 28px;
 
   color: var(--basic-blue);
   font-size: 30px;
@@ -1315,7 +1316,9 @@ input[type="checkbox"].visually-hidden {
 
 .brands-header__button {
   align-self: center;
+  margin: 25px 19px 26px auto;
   padding: 11px 38px 9px 39px;
+
   color: var(--white);
 }
 
