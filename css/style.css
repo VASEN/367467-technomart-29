@@ -1388,6 +1388,7 @@ input[type="checkbox"].visually-hidden {
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
   line-height: 24px;
+  font-weight: 400;
 }
 
 .services__slider {
@@ -1402,17 +1403,17 @@ input[type="checkbox"].visually-hidden {
 
   position: relative;
 
+  max-width: 240px;
   margin: 0;
-  padding: 45px 60px 49px 0;
+  padding: 45px 0 49px 0;
 
-  box-sizing: border-box;
 }
 
 .services-buttons_shadow::after {
   content: "";
 
   position: absolute;
-  right: 60px;
+  right: 0;
   top: 0;
   width: 10px;
   height: 279px;
@@ -1422,7 +1423,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .services__button {
-  padding: 14px 0 17px 22px;
+  padding: 14px 22px 17px 22px;
 
   color: var(--white);
   font-size: 21px;
