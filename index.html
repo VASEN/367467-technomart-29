@@ -143,9 +143,9 @@
       </section>
       <section class="goods">
         <div class="container">
-          <div class="goods-header">
-            <h2 class="goods-header__title">Популярные товары:</h2>
-            <a class="button goods-header__button" href="catalog.html">Все популярные товары</a>
+          <div class="goods__header">
+            <h2 class="goods__header-title">Популярные товары:</h2>
+            <a class="button goods__header-button" href="catalog.html">Все популярные товары</a>
           </div>
           <ul class="goods__list">
             <li class="goods__item">
@@ -159,7 +159,7 @@
               </div>
               <div class="goods__button-wrapper">
                 <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-                <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
+                <button class="button " type="button" name="button_add-bookmark">В закладки</button>
               </div>
             </li>
             <li class="goods__item new-item">
@@ -397,7 +397,7 @@
             </p>
             <p class="feedback-form__element feedback-textarea">
               <label for="feedback__text">Текст письма:</label>
-              <textarea name="feedback__text" rows="8" cols="70" placeholder="В свободной форме" id="feedback__text"></textarea>
+              <textarea name="feedback__text" placeholder="В свободной форме" id="feedback__text"></textarea>
             </p>
           </div>
           <p class="feedback-form__footer">
@@ -410,7 +410,8 @@
     </section>
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта проезда</h2>
-      <img src="img/big-map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="970" height="477">
+<!--      <img src="img/big-map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="943" height="449">-->
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCQ3fBck~A" width="940" height="449" allowfullscreen="true"></iframe>
       <button class="modal__button_close" type="button" name="modal__button_close">Закрыть</button>
     </section>
   </body>
