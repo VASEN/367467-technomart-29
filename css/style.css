@@ -805,13 +805,13 @@ input[type="checkbox"].visually-hidden {
 /* main-content */
 
 .features {
-  margin-bottom: 49px;
+  margin-bottom: 59px;
 }
 
 .features__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   grid-gap: 20px;
   align-items: start;
   grid-template-areas:
@@ -916,6 +916,7 @@ input[type="checkbox"].visually-hidden {
   display: none;
 
   position: relative;
+  max-height: 266px;
 }
 
 .slider-item__wrapper {
@@ -954,7 +955,7 @@ input[type="checkbox"].visually-hidden {
 .features-slider__controls {
   position: absolute;
 
-  left: 50%;
+  left: 295px;
   bottom: 36px;
 
   line-height: 0;
