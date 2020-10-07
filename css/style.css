@@ -2696,6 +2696,7 @@ input[type="checkbox"].visually-hidden {
 /* modal-feedback */
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -2712,8 +2713,11 @@ input[type="checkbox"].visually-hidden {
   z-index: 2;
 }
 
+.modal__show {
+  display: block;
+}
+
 .modal-feedback {
-  display: none;
   top: 145px;
   bottom: auto;
   width: 620px;
@@ -2847,8 +2851,6 @@ input[type="checkbox"].visually-hidden {
 /* MODAL-MAP*/
 
 .modal-map {
-  display: none;
-
   top: 145px;
   bottom: auto;
   width: 940px;
@@ -2862,7 +2864,6 @@ input[type="checkbox"].visually-hidden {
 /* modal-cart */
 
 .modal-cart {
-  display: none;
   top: 315px;
   bottom: auto;
   width: 620px;
