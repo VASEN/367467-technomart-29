@@ -1,6 +1,6 @@
 var feedbackOpen = document.querySelector(".about-us__button_contacts");
 var feedbackForm = document.querySelector(".modal-feedback");
-var feedbackClose = feedbackForm.querySelector(".modal__button_close");
+var feedbackClose = feedbackForm.querySelector(".modal__button--close");
 
 var feedbackName = feedbackForm.querySelector("[name=feedback__name]");
 

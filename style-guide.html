@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style-guide.css">
   </head>
   <body>
-  <header class="main-header">
+  <header class="page__header">
     <div class="header-top">
       <div class="container">
         <a class="header-top__logo" href="index.html">
@@ -18,8 +18,8 @@
           <label class="search-form__label" for="search-form__field"><span class="visually-hidden">Поиск</span></label>
           <input class="search-form__input" type="search" name="search-form__field" placeholder="Поиск:" id="search-form__field">
         </form>
-        <a class="header-top__button header-top__button-bookmark" href="#">Закладки: <span>0</span></a>
-        <a class="header-top__button header-top__button-cart" href="#">Корзина: <span>0</span></a>
+        <a class="header-top__button header-top__button--bookmark" href="#">Закладки: <span>0</span></a>
+        <a class="header-top__button header-top__button--cart" href="#">Корзина: <span>0</span></a>
         <button class="header-top__button header-top__button_order" type="button" name="order">Оформить заказ</button>
       </div>
     </div>
@@ -27,12 +27,12 @@
       <div class="container">
         <p class="header-center__promo">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-center__contacts">
-          <a class="header-center__contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <address class="header-center__contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a class="header-contacts__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <address class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="header-center__login">
-            <a class="login-form__button login-form__button-link" href="#">Войти</a>
-            <a class="login-form__button login-form__button-registration" href="#">Регистрация</a>
+            <a class="login-form__button login-form__button--link" href="#">Войти</a>
+            <a class="login-form__button login-form__button--registration" href="#">Регистрация</a>
         </div>
       </div>
     </div>
@@ -40,13 +40,13 @@
       <div class="container">
         <p class="header-center__promo">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-center__contacts">
-          <a class="header-center__contacts-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
-          <address class="header-center__contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+          <a class="header-contacts__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <address class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
         </div>
         <div class="header-center__account-wrapper">
           <div class="account__info">
-            <a class="account__button account__button_user" href="#">Равшан Джамшутович</a>
-            <a class="account__button account__button_logout" href="#">Выход</a>
+            <a class="account__button account__button--user" href="#">Равшан Джамшутович</a>
+            <a class="account__button account__button--logout" href="#">Выход</a>
           </div>
           <ul class="account__menu">
             <li class="account__item">
@@ -61,7 +61,7 @@
     </div>
     <div class="header-bottom">
       <div class="container">
-        <nav class="main-navigation">
+        <nav class="header__navigation">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
               <a class="main-navigation__link main-navigation__current-link" href="index.html">Главная</a>
@@ -89,11 +89,11 @@
       </div>
     </div>
   </header>
-  <main class="main-content">
+  <main class="page__content">
     <div class="container">
       <div class="features__item new-item">
-        <div class="features__item-wrapper">
-          <h3 class="features__item-title">Материалы</h3>
+        <div class="features__item--wrapper">
+          <h3 class="features__item--title">Материалы</h3>
           <a class="features__button" href="#">На любой вкус</a>
         </div>
         <img src="img/icon-1.svg" width="44" height="65" alt="Материалы">
@@ -107,8 +107,8 @@
           <label for="slider__radio_1">Слайдер 1</label>
           <label for="slider__radio_2">Слайдер 2</label>
         </div>
-        <button class="features-slider__button features-slider__button_next" type="button" name="button_next">Следующий слайд</button>
-        <button class="features-slider__button features-slider__button_prev" type="button" name="button_prev">Предыдущий слайд</button>
+        <button class="features-slider__button features-slider__button--next" type="button" name="button_next">Следующий слайд</button>
+        <button class="features-slider__button features-slider__button--prev" type="button" name="button_prev">Предыдущий слайд</button>
         <div class="features__slider">
           <div class="features-slider__item features-slider__item_1" id="slide-1">
             <div class="slider-item__wrapper">
@@ -132,11 +132,11 @@
         <div class="goods__item-wrapper">
           <h3 class="goods__title">Перфоратор BOSCH BFG 9000</h3>
           <img src="img/BFG-9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
-          <del class="goods__price_old">32500 Р.</del>
+          <del class="goods__price--old">32500 Р.</del>
           <span class="goods__price">25500 Р.</span>
           <div class="goods__button-wrapper">
-            <button class="button goods__button_buy" type="button" name="button_buy">Купить</button>
-            <button class="button goods__button_add-bookmark" type="button" name="button_add-bookmark">В закладки</button>
+            <button class="button goods__button--buy" type="button" name="button--buy">Купить</button>
+            <button class="button goods__button--add-bookmark" type="button" name="button--add-bookmark">В закладки</button>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@
           <h3 class="filter-sort__title">Сортировка:</h3>
           <div class="sort__types-wrapper">
             <div class="sort__item">
-              <button class="sort__button sort__button_current" type="button" name="sort__price">По цене</button>
+              <button class="sort__button sort__button--current" type="button" name="sort__price">По цене</button>
             </div>
             <div class="sort__item">
               <button class="sort__button" type="button" name="sort__type">По типу</button>
@@ -165,10 +165,10 @@
           </div>
           <div class="sort__wrapper">
             <div class="sort__item">
-              <button class="sort__button_up-down sort__button_up sort__button_up-down_current" type="button" name="sort__button_up">По возрастанию</button>
+              <button class="sort__button--up-down sort__button--up sort__button--up-down--current" type="button" name="sort__button--up">По возрастанию</button>
             </div>
             <div class="sort__item">
-              <button class="sort__button_up-down sort__button_down" type="button" name="sort__button_down">По убыванию</button>
+              <button class="sort__button--up-down sort__button--down" type="button" name="sort__button--down">По убыванию</button>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@
     </div>
     <div class="container">
       <section class="pagination">
-        <ul class="pagination_list">
+        <ul class="pagination__list">
           <li class="pagination__item">
             <a class="pagination__link pagination__link_current">1</a>
           </li>
@@ -208,7 +208,7 @@
         </li>
       </ul>
 
-      <ul class="filter-brands__list">
+      <ul class="filter-section__list">
         <li class="filter-brands__item">
           <input class="visually-hidden" type="checkbox" name="filter-brands__bosch" id="filter-brands__bosch" checked>
           <label for="filter-brands__bosch"><span class="checked"></span>Чекбокс</label>
@@ -228,11 +228,11 @@
     <section class="services">
       <div class="container">
         <div class="services__slider">
-          <div class="services-buttons">
-            <span class="services-buttons_shadow"></span>
-            <button class="services__button services__button_current" type="button" name="services__button_delivery">Доставка</button>
-            <button class="services__button" type="button" name="services__button_guarantee">Гарантия</button>
-            <button class="services__button" type="button" name="services__button_credit">Кредит</button>
+          <div class="services-slider__buttons">
+            <span class="services-slider__buttons--shadow"></span>
+            <button class="services-slider__button services-slider__button--current" type="button" name="services-slider__button_delivery">Доставка</button>
+            <button class="services-slider__button" type="button" name="services-slider__button_guarantee">Гарантия</button>
+            <button class="services-slider__button" type="button" name="services-slider__button_credit">Кредит</button>
           </div>
           <!-- Слайдеры -->
           <ul class="services-slider__list">
@@ -254,7 +254,7 @@
       </div>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="page__footer">
     <div class="footer-top">
       <div class="container">
         <a class="footer-top__logo" href="index.html">
@@ -305,16 +305,16 @@
     </div>
     <div class="footer-bottom">
       <div class="container">
-        <p class="footer-copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
+        <p class="footer-bottom__copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
         <ul class="social">
           <li class="social__item">
-            <a class="social__button social__button_vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
+            <a class="social__button social__button--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
           </li>
           <li class="social__item">
-            <a class="social__button social__button_fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
+            <a class="social__button social__button--fb" href="#"><span class="visually-hidden">Фейсбук</span></a>
           </li>
           <li class="social__item">
-            <a class="social__button social__button_inst" href="#"><span class="visually-hidden">Инстаграмм</span></a>
+            <a class="social__button social__button--inst" href="#"><span class="visually-hidden">Инстаграмм</span></a>
           </li>
         </ul>
         <p class="feedback">
