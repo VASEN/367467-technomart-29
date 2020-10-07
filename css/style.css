@@ -243,10 +243,14 @@ input[type="checkbox"].visually-hidden {
 }
 
 .container {
-  max-width: 940px;
+  max-width: 960px;
   width: 100%;
 
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  box-sizing: border-box;
 }
 
 /* header-top */
@@ -472,6 +476,7 @@ input[type="checkbox"].visually-hidden {
 .header-center .container {
   display: grid;
   grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 76px;
   grid-gap: 20px;
 }
 
@@ -495,6 +500,8 @@ input[type="checkbox"].visually-hidden {
   align-items: start;
 
   width: 300px;
+  margin-top: 4px;
+
   text-align: left;
 }
 
@@ -543,6 +550,7 @@ input[type="checkbox"].visually-hidden {
   align-content: start;
 
   width: 300px;
+  margin-top: 4px;
 }
 
 .login-form__button {
@@ -597,6 +605,8 @@ input[type="checkbox"].visually-hidden {
 
 .account {
   grid-column: 3/4;
+
+  margin-top: 4px;
 }
 
 .account__info {
@@ -935,6 +945,12 @@ input[type="checkbox"].visually-hidden {
   max-height: 266px;
 }
 
+.slider-item img {
+  max-width: 620px;
+  max-height: 266px;
+  object-fit: contain;
+}
+
 .slider-item__wrapper {
   position: absolute;
   top: 23px;
@@ -1159,7 +1175,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .goods__image-wrapper > img {
+  max-width: 184px;
+  max-height: 164px;
   margin: 0 auto;
+
+  object-fit: contain;
 }
 
 .goods__info-wrapper {
@@ -1215,7 +1235,7 @@ input[type="checkbox"].visually-hidden {
 
   position: absolute;
   top: 0;
-  left: 119px;
+  right: -19px;
 
   border-left: 20px solid var(--basic-red);
   border-top: 19px solid transparent;
@@ -1368,6 +1388,13 @@ input[type="checkbox"].visually-hidden {
   object-fit: contain;
 }
 
+.brands__link > img {
+  max-width: 220px;
+  max-height: 145px;
+
+  object-fit: contain;
+}
+
 .brands__item:hover,
 .brands__item:focus {
   box-shadow: 0 4px 20px var(--black-opacity-24);
@@ -1383,14 +1410,14 @@ input[type="checkbox"].visually-hidden {
 .services {
   margin-bottom: 70px;
   padding-top: 64px;
-  padding-bottom: 54px;
+  padding-bottom: 52px;
 
   background-color: var(--basic-background);
   cursor: default;
 }
 
 .services__title {
-  margin: 0 0 25px;
+  margin: 0 0 24px;
   padding: 0;
 
   font-size: 30px;
@@ -1401,7 +1428,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .services__info {
-  margin: 0 0 21px;
+  margin: 0 0 23px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -1411,7 +1438,7 @@ input[type="checkbox"].visually-hidden {
 
 .services__slider {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 300px 620px;
   grid-gap: 20px;
 }
 
@@ -1423,8 +1450,9 @@ input[type="checkbox"].visually-hidden {
 
   max-width: 240px;
   margin: 0;
-  padding: 45px 0 49px 0;
+  padding: 49px 0 49px 0;
 
+  box-sizing: border-box;
 }
 
 .services-buttons_shadow::after {
@@ -1450,6 +1478,9 @@ input[type="checkbox"].visually-hidden {
   text-align: left;
 
   background-color: var(--basic-blue);
+  box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
+  box-sizing: border-box;
+
   border: none;
   cursor: pointer;
 }
@@ -1468,6 +1499,7 @@ input[type="checkbox"].visually-hidden {
   color: var(--basic-blue);
 
   background-color: var(--white);
+  box-shadow: none;
 }
 
 .services-slider__list {
@@ -1484,14 +1516,14 @@ input[type="checkbox"].visually-hidden {
 
   position: relative;
 
-  padding-top: 45px;
+  padding-top: 46px;
 }
 
 .services-slider__item:nth-child(1)::after {
   content: "";
 
   position: absolute;
-  top: 65px;
+  top: 67px;
   right: 0;
   width: 468px;
   height: 261px;
@@ -1526,8 +1558,6 @@ input[type="checkbox"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-
-
 .services-slider__title {
   margin: 0 0 30px;
   padding: 0;
@@ -1546,6 +1576,7 @@ input[type="checkbox"].visually-hidden {
 
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
+  line-height: 24px;
   z-index: 2;
 }
 
@@ -1576,7 +1607,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .about-us__title {
-  margin: 0 0 24px;
+  margin: 0 0 23px;
   padding: 0;
 
   color: var(--black);
@@ -1587,14 +1618,18 @@ input[type="checkbox"].visually-hidden {
 }
 
 .about-us__content {
-  margin: 0 0 30px;
+  margin: 0 0 26px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
 }
 
+.contacts-content {
+  margin-bottom: 32px;
+}
+
 .about-us__delivery {
-  margin: 0;
+  margin: 0 0 3px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -1633,6 +1668,7 @@ input[type="checkbox"].visually-hidden {
 
 .about-us__button {
   display: inline-block;
+  margin: 0;
   padding: 11px 40px 9px;
 
   color: var(--white);
@@ -1645,7 +1681,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .about-us__contacts > img {
-  margin-bottom: 25px;
+  max-width: 300px;
+  max-height: 158px;
+  margin-bottom: 20px;
+
+  object-fit: contain;
 }
 
 /* GRID CATALOG */
@@ -1950,7 +1990,7 @@ input[type="checkbox"].visually-hidden {
   display: none;
 }
 
-.filter-brands__item > input[type="checkbox"]:checked ~ .checked {
+.filter-brands__item > input[type="checkbox"]:checked ~ label > .checked {
   display: block;
 }
 
@@ -2086,6 +2126,7 @@ input[type="checkbox"].visually-hidden {
   justify-content: space-around;
   flex-grow: 1;
 
+  max-width: 400px;
 }
 
 .sort__button {
@@ -2379,6 +2420,7 @@ input[type="checkbox"].visually-hidden {
 .footer-top__logo,
 .footer-top__logo:hover,
 .footer-top__logo:focus {
+  align-self: center;
   display: inline-block;
   position: relative;
 
