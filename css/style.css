@@ -1474,6 +1474,10 @@ input[type="checkbox"].visually-hidden {
   padding-top: 46px;
 }
 
+.services-slider__item--current {
+  display: flex;
+}
+
 .services-slider__item:nth-child(1)::after {
   content: "";
 
@@ -1543,10 +1547,6 @@ input[type="checkbox"].visually-hidden {
   display: inline-block;
   padding: 10px 25px;
   color: var(--white);
-}
-
-.services-slider__item:first-child {
-  display: flex;
 }
 
 /* about-us */
