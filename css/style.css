@@ -982,9 +982,6 @@ input[type="checkbox"].visually-hidden {
   padding: 11px 46px 9px;
 }
 
-.features__slider > input {
-}
-
 .features-slider__controls {
   position: absolute;
 
@@ -1009,10 +1006,20 @@ input[type="checkbox"].visually-hidden {
 
   cursor: pointer;
   box-sizing: border-box;
+  /*outline: 5px auto -webkit-focus-ring-color;*/
 }
 
 .features-slider__controls > label:first-child {
   margin-left: 0;
+}
+
+/*.features-slider input[type="radio"]:focus + .features-slider__controls > label {*/
+/*  outline: 5px auto -webkit-focus-ring-color;*/
+/*}*/
+
+#slider__radio_1:focus ~ .features-slider__controls label[for="slider__radio_1"],
+#slider__radio_2:focus ~ .features-slider__controls label[for="slider__radio_2"] {
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 #slider__radio_1:checked ~ .features-slider__list #slide-1,
