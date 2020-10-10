@@ -662,7 +662,6 @@ input[type="checkbox"].visually-hidden {
   position: relative;
 
   color: var(--basic-lightgray);
-  font-size: 0;
 }
 
 .account__button--logout::before {
@@ -1005,8 +1004,6 @@ input[type="checkbox"].visually-hidden {
   margin-left: 5px;
   padding: 2px;
 
-  font-size: 0;
-
   background-color: var(--white);
   border-radius: 50%;
 
@@ -1042,8 +1039,6 @@ input[type="checkbox"].visually-hidden {
   height: 41px;
   margin: 0;
   padding: 0;
-
-  font-size: 0;
 
   background-color: transparent;
   border: none;
@@ -1091,13 +1086,13 @@ input[type="checkbox"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-/*MODULE*/
+/*grid-module*/
 
-.module {
+.grid-module {
   margin-bottom: 70px;
 }
 
-.module__header {
+.grid-module__header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1109,7 +1104,7 @@ input[type="checkbox"].visually-hidden {
   background-color: var(--special-lightbrown);
 }
 
-.module__title {
+.grid-module__title {
   margin: 0;
   padding: 0;
 
@@ -1120,14 +1115,14 @@ input[type="checkbox"].visually-hidden {
   text-transform: uppercase;
 }
 
-.module__button {
+.grid-module__button {
   margin-left: auto;
   padding: 11px 24px 9px 24px;
 
   color: var(--white);
 }
 
-.module__list {
+.grid-module__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
@@ -1326,6 +1321,14 @@ input[type="checkbox"].visually-hidden {
 
 /* brands */
 
+.brands .grid-module__header {
+  padding-right: 19px;
+}
+
+.brands .grid-module__button {
+  padding: 11px 38px 9px 39px;
+}
+
 .brands__item {
   display: flex;
   align-items: center;
@@ -1498,7 +1501,7 @@ input[type="checkbox"].visually-hidden {
   top: 65px;
   right: 0;
   width: 389px;
-  height: 283px;
+  height: 261px;
 
   background-image: url("../img/services__slider-2.png");
   background-repeat: no-repeat;
@@ -1511,7 +1514,7 @@ input[type="checkbox"].visually-hidden {
   top: 65px;
   right: 0;
   width: 465px;
-  height: 285px;
+  height: 261px;
 
   background-image: url("../img/services__slider-3.png");
   background-repeat: no-repeat;
@@ -1695,6 +1698,7 @@ input[type="checkbox"].visually-hidden {
 
   color: inherit;
 }
+
 .breadcrumbs__link:last-child {
   margin-right: 0;
 }
@@ -1710,7 +1714,6 @@ input[type="checkbox"].visually-hidden {
   font-size: 0;
 }
 
-
 .breadcrumbs__item:not(:first-child) .breadcrumbs__link::after {
   content: "";
 
@@ -1724,7 +1727,11 @@ input[type="checkbox"].visually-hidden {
   background-repeat: no-repeat;
 }
 
-.breadcrumbs__item:first-child > .breadcrumbs__link:before {
+.breadcrumbs__item:not(:first-child) .breadcrumbs__link:focus::after {
+  outline:none;
+}
+
+.breadcrumbs__item:first-child > .breadcrumbs__link::before {
   content: "";
 
   position: absolute;
@@ -1735,6 +1742,10 @@ input[type="checkbox"].visually-hidden {
 
   background-image: url("../img/icon-home.svg");
   background-repeat: no-repeat;
+}
+
+.breadcrumbs__item:first-child > .breadcrumbs__link:focus::before {
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 .inner-page__title {
@@ -2000,8 +2011,8 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter-energy__item input[type="radio"]:focus + label::before,
-.filter-brands__item input[type="checkbox"]:focus + label::before {
-  outline: thin dotted;
+.filter-brands__item input[type="checkbox"]:focus + label::before,
+.filter-brands__item > input[type="checkbox"]:checked:focus ~ label > .checked{
   outline: 5px auto -webkit-focus-ring-color;
 }
 
@@ -2140,9 +2151,9 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   padding: 0;
 
+  font-size: 0;
   color: var(--black-opacity-30);
   font-family: "PT Sans", sans-serif;
-  font-size: 0;
   line-height: 17px;
   text-transform: uppercase;
 
@@ -2476,7 +2487,7 @@ input[type="checkbox"].visually-hidden {
 
   max-width: 560px;
   margin: 0 0 0 auto;
-  padding: 0;
+  padding: 5px 0 0;
 
   list-style: none;
 }
@@ -2534,7 +2545,7 @@ input[type="checkbox"].visually-hidden {
   flex-wrap: wrap;
   align-self: center;
 
-  margin: 0 auto;
+  margin: 0 auto 0 69px;
   padding: 0;
 
   list-style: none;
@@ -2558,9 +2569,7 @@ input[type="checkbox"].visually-hidden {
   padding: 0;
 
   color: var(--white);
-  font-size: 0;
 
-  /*border: 20px solid var(--social-background);*/
   background-color: var(--social-background);
   border-radius: 50%;
 }
@@ -2627,7 +2636,7 @@ input[type="checkbox"].visually-hidden {
   flex-direction: column;
   flex-wrap: wrap;
 
-  margin: 0 0 0 auto;
+  margin: 0 auto;
 }
 
 .feedback__link,
@@ -2767,8 +2776,6 @@ input[type="checkbox"].visually-hidden {
   width: 21px;
   height: 21px;
   padding: 0;
-
-  font-size: 0;
 
   border: none;
   background-color: transparent;

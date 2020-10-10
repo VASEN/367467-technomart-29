@@ -4,12 +4,9 @@ let serviceSliders = services.querySelectorAll(".services-slider__item");
 
 let currentButton = services.querySelector(".services-slider__button--current");
 let currentSlide = services.querySelector(".services-slider__item--current");
-console.log(currentButton);
-console.log(currentSlide);
 
 for (let i = 0; i < serviceButtons.length; i++) {
   serviceButtons[i].addEventListener("click", function () {
-    console.log(serviceButtons[i]);
     if (serviceButtons[i].classList.contains("services-slider__button--current")) {
       currentButton = serviceButtons[i];
       currentSlide = serviceSliders[i];

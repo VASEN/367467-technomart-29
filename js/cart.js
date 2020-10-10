@@ -1,6 +1,6 @@
-var buyButton = document.querySelectorAll(".goods__button--buy");
-var cartForm = document.querySelector(".modal-cart");
-var cartClose = cartForm.querySelector(".modal__button--close");
+let buyButton = document.querySelectorAll(".goods__button--buy");
+let cartForm = document.querySelector(".modal-cart");
+let cartClose = cartForm.querySelector(".modal__button--close");
 
 buyButton.forEach(function (item) {
   item.addEventListener("click", function () {

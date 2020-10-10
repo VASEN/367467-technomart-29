@@ -1,8 +1,8 @@
-var feedbackOpen = document.querySelector(".about-us__button_contacts");
-var feedbackForm = document.querySelector(".modal-feedback");
-var feedbackClose = feedbackForm.querySelector(".modal__button--close");
+let feedbackOpen = document.querySelector(".about-us__button_contacts");
+let feedbackForm = document.querySelector(".modal-feedback");
+let feedbackClose = feedbackForm.querySelector(".modal__button--close");
 
-var feedbackName = feedbackForm.querySelector("[name=feedback__name]");
+let feedbackName = feedbackForm.querySelector("[name=feedback__name]");
 
 
 feedbackOpen.addEventListener("click", function () {
@@ -10,12 +10,12 @@ feedbackOpen.addEventListener("click", function () {
   feedbackName.focus();
 });
 
-// feedbackForm.addEventListener("keydown", function (evt){
-//   evt.preventDefault();
-//   if (evt.code === 27) {
-//     feedbackForm.classList.remove("modal__show");
-//   }
-// });
+feedbackForm.addEventListener("keydown", function (evt){
+  evt.preventDefault();
+  if (evt.code === "Escape") {
+    feedbackForm.classList.remove("modal__show");
+  }
+});
 
 
 feedbackClose.addEventListener("click", function () {

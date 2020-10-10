@@ -116,8 +116,8 @@
               <input class="visually-hidden" type="radio" id="slider__radio_1" name="toggle" checked>
               <input class="visually-hidden" type="radio" id="slider__radio_2" name="toggle">
               <div class="features-slider__controls">
-                <label for="slider__radio_1">Слайдер 1</label>
-                <label for="slider__radio_2">Слайдер 2</label>
+                <label for="slider__radio_1" aria-label="Переключение на слайд №1"></label>
+                <label for="slider__radio_2" aria-label="Переключение на слайд №2"></label>
               </div>
               <div class="features-slider__list">
                 <div class="features-slider__item slider-item features-slider__item--current" id="slide-1">
@@ -136,20 +136,20 @@
                   </div>
                   <a class="button slider-item__link" href="catalog.html">Открыть каталог</a>
                 </div>
-                <button class="features-slider__button features-slider__button--next" type="button" name="button_next" title="Следующий слайд">Следующий слайд</button>
-                <button class="features-slider__button features-slider__button--prev" type="button" name="button_prev" title="Предыдущий слайд">Предыдущий слайд</button>
+                <button class="features-slider__button features-slider__button--next" type="button" name="button_next" title="Следующий слайд" aria-label="Следующий слайд"></button>
+                <button class="features-slider__button features-slider__button--prev" type="button" name="button_prev" title="Предыдущий слайд" aria-label="Предыдущий слайд"></button>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="module">
+      <section class="grid-module goods">
         <div class="container">
-          <div class="module__header">
-            <h2 class="module__title">Популярные товары:</h2>
-            <a class="button module__button" href="catalog.html">Все популярные товары</a>
+          <div class="grid-module__header">
+            <h2 class="grid-module__title">Популярные товары:</h2>
+            <a class="button grid-module__button" href="catalog.html">Все популярные товары</a>
           </div>
-          <ul class="module__list goods">
+          <ul class="grid-module__list">
             <li class="goods__item">
               <div class="goods__image-wrapper">
                 <img src="img/BFG-9000.jpg" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
@@ -208,13 +208,13 @@
           </ul>
         </div>
       </section>
-      <section class="module">
+      <section class="grid-module brands">
         <div class="container">
-          <div class="module__header">
-            <h2 class="module__title">Популярные производители:</h2>
-            <a class="button module__button" href="#">Все производители</a>
+          <div class="grid-module__header">
+            <h2 class="grid-module__title">Популярные производители:</h2>
+            <a class="button grid-module__button" href="#">Все производители</a>
           </div>
-          <ul class="module__list brands">
+          <ul class="grid-module__list">
             <li class="brands__item">
               <a class="brands__link" href="#">
                 <img src="img/bosch.png" alt="Bosch" width="126" height="37">
@@ -364,13 +364,13 @@
           <p class="footer-bottom__copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
           <ul class="footer-bottom__social social">
             <li class="social__item">
-              <a class="social__button social__button--vk" href="#">Вконтакте</a>
+              <a class="social__button social__button--vk" href="#" aria-label="Ссылка на социальную сеть Вконтакте"></a>
             </li>
             <li class="social__item">
-              <a class="social__button social__button--fb" href="#">Фейсбук</a>
+              <a class="social__button social__button--fb" href="#" aria-label="Ссылка на социальную сеть Фейсбук"></a>
             </li>
             <li class="social__item">
-              <a class="social__button social__button--inst" href="#">Инстаграмм</a>
+              <a class="social__button social__button--inst" href="#" aria-label="Ссылка на социальную сеть Инстаграмм  "></a>
             </li>
           </ul>
           <p class="footer-bottom__feedback feedback">
@@ -406,7 +406,7 @@
             <button class="button feedback-form__button" type="submit" name="feedback-button">Отправить</button>
           </p>
         </form>
-        <button class="modal__button--close" type="button" name="modal__button--close">Закрыть</button>
+        <button class="modal__button--close" type="button" name="modal__button--close" aria-label="Закрыть"></button>
       </div>
     </section>
     <section class="modal modal-map">
