@@ -8,4 +8,5 @@ mapOpen.addEventListener("click", function () {
 
 mapClose.addEventListener("click", function () {
   map.classList.remove("modal__show");
-})
+});
+
