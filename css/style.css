@@ -56,16 +56,21 @@
 /* Переменные */
 
 :root {
-
   --white: #FFFFFF;
   --black: #000000;
-  --basic-blue: #32425C;
-  --basic-darkblue: #293449;
+
   --basic-red: #EE3643;
+  --basic-blue: #32425C;
+
+
+  --basic-background: #F1F5F7;
+  --basic-border: #EAEAEA;
+
+
+  --basic-darkblue: #293449;
   --basic-green: #63A63E;
   --basic-lightgray: #C5C5C5;
   --basic-gray: #3D546F;
-  --basic-background: #F1F5F7;
 
   --special-aquablue: #3BBCE3;
 
@@ -2787,6 +2792,8 @@ input[type="checkbox"].visually-hidden {
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  z-index: 2;
 }
 
 .modal__button--close::before {
@@ -2820,6 +2827,7 @@ input[type="checkbox"].visually-hidden {
 /* MODAL-MAP*/
 
 .modal-map {
+  /*position: relative;*/
   top: 145px;
   bottom: auto;
   width: 940px;
@@ -2827,7 +2835,21 @@ input[type="checkbox"].visually-hidden {
 }
 
 .modal-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   border: none;
+
+  z-index: 1;
+}
+
+.modal-map img {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 /* modal-cart */
