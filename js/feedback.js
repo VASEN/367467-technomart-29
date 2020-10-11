@@ -12,7 +12,7 @@ feedbackOpen.addEventListener("click", function () {
 
 feedbackForm.addEventListener("keydown", function (evt){
   evt.preventDefault();
-  if (evt.code === "Escape") {
+  if (evt.code === "Escape" || evt.code === 27) {
     feedbackForm.classList.remove("modal__show");
   }
 });
