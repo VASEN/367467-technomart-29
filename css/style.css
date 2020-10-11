@@ -2470,7 +2470,8 @@ input[type="checkbox"].visually-hidden {
 /* footer-center */
 
 .footer-center {
-  padding-top: 27px;
+  padding-top: 29px;
+  padding-left: 3px;
   padding-bottom: 54px;
 }
 
@@ -2575,29 +2576,57 @@ input[type="checkbox"].visually-hidden {
 
   position: relative;
 
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   margin: 0;
   padding: 0;
 
   color: var(--white);
 
   background-color: var(--social-background);
+  background-position: 0 0;
   border-radius: 50%;
+  transition: background-position 5s;
 }
 
-.social__button:hover,
+/*.social__button:hover,*/
 .social__button:focus,
 .social__button:active {
-  border-color: var(--basic-red);
+  background-color: var(--basic-red);
+}
+
+.social__button:after {
+  content: "";
+
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  top: 0;
+
+  background-color: var(--basic-red);
+  border-radius: 50%;
+
+  transform: scaleY(0);
+  transform-origin: 50% 0%;
+  transition: transform 0.5s;
+}
+
+.social__button:hover::after {
+  transform: scaleY(1);
+  transform-origin: 50% 100%;
+  transition: transform 0.5s;
+}
+
+.social__button::before {
+  z-index: 2;
 }
 
 .social__button--vk:before {
   content: "";
 
   position: absolute;
-  top: 12px;
-  left: 7px;
+  top: 13px;
+  left: 8px;
   width: 26px;
   height: 15px;
 
@@ -2609,8 +2638,8 @@ input[type="checkbox"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: 9px;
-  left: 14px;
+  top: 10px;
+  left: 15px;
   width: 12px;
   height: 22px;
 
@@ -2622,8 +2651,8 @@ input[type="checkbox"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: 9px;
-  left: 9px;
+  top: 10px;
+  left: 10px;
   width: 21px;
   height: 21px;
 
@@ -2648,7 +2677,7 @@ input[type="checkbox"].visually-hidden {
   flex-direction: column;
   flex-wrap: wrap;
 
-  margin: 0 auto;
+  margin: 0 auto 0 29px;
 }
 
 .feedback__link,
