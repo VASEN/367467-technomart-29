@@ -618,6 +618,7 @@ input[type="checkbox"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   min-width: 300px;
+  margin-bottom: 4px;
 
   font-size: 21px;
   line-height: 21px;
@@ -726,11 +727,11 @@ input[type="checkbox"].visually-hidden {
 
   position: absolute;
 
-  top: 6px;
-  left: 10px;
+  top: 7px;
+  left: 12px;
 
-  width: 6px;
-  height: 6px;
+  width: 4px;
+  height: 4px;
 
   background-color: var(--basic-blue);
   border-radius: 50%;
@@ -1111,7 +1112,7 @@ input[type="checkbox"].visually-hidden {
   align-items: center;
 
   margin-bottom: 20px;
-  padding: 25px 14px 25px 25px;
+  padding: 25px 14px 26px 25px;
 
   background-color: var(--special-lightbrown);
 }
@@ -1119,6 +1120,8 @@ input[type="checkbox"].visually-hidden {
 .grid-module__title {
   margin: 0;
   padding: 0;
+  padding-left: 3px;
+  padding-bottom: 1px;
 
   color: var(--basic-blue);
   font-size: 30px;
@@ -1153,8 +1156,8 @@ input[type="checkbox"].visually-hidden {
 
   position: relative;
 
-  padding-top: 7px;
-  padding-bottom: 21px;
+  padding-top: 5px;
+  padding-bottom: 20px;
 
   text-align: center;
 
@@ -1179,7 +1182,7 @@ input[type="checkbox"].visually-hidden {
   width: 184px;
   min-height: 164px;
 
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 
 .goods__image-wrapper > img {
@@ -1199,7 +1202,7 @@ input[type="checkbox"].visually-hidden {
 
 .goods__title {
   margin: 0;
-  padding: 0 17px 9px 18px;
+  padding: 0 17px 8px 18px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -1222,8 +1225,7 @@ input[type="checkbox"].visually-hidden {
 .goods__price {
   position: relative;
 
-  margin: 0 auto;
-
+  margin: 0 auto 0 47px;
   padding: 10px 24px 10px 32px;
 
   color: var(--white);
@@ -1663,12 +1665,8 @@ input[type="checkbox"].visually-hidden {
 .inner-page__catalog {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   grid-gap: 20px;
-
-  grid-template-areas:
-    "filter sort sort sort"
-    "filter content content content";
 
   margin-bottom: 48px;
 }
@@ -1680,7 +1678,7 @@ input[type="checkbox"].visually-hidden {
   flex-wrap: wrap;
 
   margin: 0;
-  padding: 21px 0 20px;
+  padding: 21px 0 17px;
 
   color: var(--black);
   font-family: "PT Sans", sans-serif;
@@ -1762,7 +1760,7 @@ input[type="checkbox"].visually-hidden {
 
 .inner-page__title {
   margin: 0 0 20px;
-  padding: 29px 0 30px 28px;
+  padding: 29px 29px 30px 29px;
 
   color: var(--basic-blue);
   font-size: 30px;
@@ -1775,12 +1773,12 @@ input[type="checkbox"].visually-hidden {
 
 /* filter */
 .filter {
-  grid-area: filter;
+  grid-column-end: span 1;
 }
 
 .filter__title {
-  margin: 0 0 20px;
-  padding: 10px 0 10px 19px;
+  margin: 0;
+  padding: 9px 18px 10px 18px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -1792,27 +1790,58 @@ input[type="checkbox"].visually-hidden {
   border-radius: 2px;
 }
 
+.filter__form {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+}
+
 .filter-section {
   margin: 0;
-  padding: 0 0 25px;
+  padding: 0;
 
   border: none;
 }
 
 .filter-section:not(:last-of-type) {
-  margin-bottom: 16px;
-
   border-bottom: 1px solid var(--special-middlegray);
 }
 
+.filter-section__price {
+  padding-top: 14px;
+  padding-bottom: 25px;
+}
+
+.filter-section__brands {
+  padding-top: 16px;
+  padding-bottom: 26px;
+}
+
+.filter-section__energy {
+  padding-top: 18px;
+  padding-bottom: 34px;
+}
+
 .filter-section__title {
-  margin-bottom: 11px;
+  margin: 0;
+  padding-bottom: 0;
 
   font-family: "PT Sans", sans-serif;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.filter-section__price > .filter-section__title {
+  margin-bottom: 11px;
+}
+
+.filter-section__brands > .filter-section__title {
+  margin-bottom: 15px;
+}
+
+.filter-section__energy > .filter-section__title {
+  margin-bottom: 21px;
 }
 
 .price-range {
@@ -1889,7 +1918,7 @@ input[type="checkbox"].visually-hidden {
 .price__element > input[type="number"] {
   width: 95px;
   margin: 0;
-  padding: 8px;
+  padding: 10px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 17px;
@@ -1918,12 +1947,24 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter-brands__item {
+  display: flex;
+  align-items: center;
+
   position: relative;
+
+  min-height: 23px;
+}
+
+.filter-energy__item {
+  display: flex;
+  align-items: center;
+
+  min-height: 25px;
 }
 
 .filter-brands__item:not(:last-child),
 .filter-energy__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .filter-brands__item > label,
@@ -1955,6 +1996,7 @@ input[type="checkbox"].visually-hidden {
 
   width: 23px;
   height: 23px;
+  top: -1px;
   left: 0;
 
   background-color: transparent;
@@ -1962,7 +2004,6 @@ input[type="checkbox"].visually-hidden {
   border-radius: 3px;
   box-sizing: border-box;
 }
-
 
 .filter-brands__item > input[type="checkbox"]:checked ~ label::before {
   display: none;
@@ -2056,7 +2097,7 @@ input[type="checkbox"].visually-hidden {
   display: block;
   min-width: 100%;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 9px 10px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -2068,18 +2109,26 @@ input[type="checkbox"].visually-hidden {
   cursor: pointer;
 }
 
+.catalog__wrapper {
+  grid-column-end: span 3;
+
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-gap: 28px;
+}
+
 /* sort */
 
 .sort {
-  grid-area: sort;
-
   display: inline-block;
 }
 
 .sort__menu-wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
+
+  padding: 9px 16px 10px 19px;
 
   background-color: var(--special-brown);
   border-radius: 2px;
@@ -2087,7 +2136,7 @@ input[type="checkbox"].visually-hidden {
 
 .sort__title {
   margin: 0;
-  padding: 10px 120px 10px 19px;
+  padding: 0 120px 0 0;
 
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
@@ -2102,9 +2151,14 @@ input[type="checkbox"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: flex-start;
   flex-grow: 1;
 
   max-width: 400px;
+
+  font-size: 13px;
+  line-height: 17px;
+  box-sizing: border-box;
 }
 
 .sort__button {
@@ -2114,7 +2168,7 @@ input[type="checkbox"].visually-hidden {
   color: var(--black-opacity-30);
   font-family: "PT Sans", sans-serif;
   font-size: 13px;
-  line-height: 17px;
+  line-height: 14px;
   text-transform: uppercase;
 
   background-color: transparent;
@@ -2151,9 +2205,13 @@ input[type="checkbox"].visually-hidden {
   flex-wrap: wrap;
   justify-content: space-around;
 
-  width: 80px;
+  width: 44px;
+  margin-left: 20px;
+  padding: 0;
 
-  padding: 0 17px 0 20px;
+  font-size: 13px;
+  line-height: 17px;
+
   box-sizing: border-box;
 }
 
@@ -2163,7 +2221,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   padding: 0;
 
-  font-size: 0;
+  font-size: 13px;
   color: var(--black-opacity-30);
   font-family: "PT Sans", sans-serif;
   line-height: 17px;
@@ -2178,6 +2236,7 @@ input[type="checkbox"].visually-hidden {
   content: "";
 
   position: absolute;
+  top: -10px;
   right: 0;
 
   border-bottom: 10px solid var(--basic-lightgray);
@@ -2189,6 +2248,7 @@ input[type="checkbox"].visually-hidden {
   content: "";
 
   position: absolute;
+  top: -10px;
   left: 0;
 
   border-top: 10px solid var(--basic-lightgray);
@@ -2257,8 +2317,6 @@ input[type="checkbox"].visually-hidden {
 /* catalog-content */
 
 .inner-page .goods {
-  grid-area: content;
-
   margin-bottom: 0;
 }
 
@@ -2266,7 +2324,7 @@ input[type="checkbox"].visually-hidden {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 18px;
   margin: 0;
   padding: 0;
 
@@ -2314,15 +2372,16 @@ input[type="checkbox"].visually-hidden {
   display: block;
 
   margin: 0;
-  padding: 10px 14px;
+  padding: 10px 15px;
 
   color: inherit;
 
   border: 1px solid var(--special-middlegray);
   border-radius: 2px;
+  box-sizing: border-box;
 }
 
-.pagination__link_next {
+.pagination__link--next {
   padding-left: 29px;
   padding-right: 32px;
 }
@@ -2346,6 +2405,7 @@ input[type="checkbox"].visually-hidden {
   color: var(--white);
 
   background-color: var(--basic-red);
+  box-sizing: border-box;
 }
 
 /* catalog__info */

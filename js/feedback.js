@@ -21,5 +21,3 @@ feedbackForm.addEventListener("keydown", function (evt){
 feedbackClose.addEventListener("click", function () {
   feedbackForm.classList.remove("modal__show");
 });
-
-
