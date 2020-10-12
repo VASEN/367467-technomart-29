@@ -2369,10 +2369,10 @@ input[type="checkbox"].visually-hidden {
 }
 
 .pagination__link {
-  display: block;
+  display: inline-block;
 
   margin: 0;
-  padding: 10px 15px;
+  padding: 9px 14px;
 
   color: inherit;
 
@@ -2399,6 +2399,8 @@ input[type="checkbox"].visually-hidden {
 .pagination__link_current:hover,
 .pagination__link_current:focus,
 .pagination__link_current:active {
+  padding: 10px 15px;
+
   border: none;
   border-radius: 2px;
 
