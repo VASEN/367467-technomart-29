@@ -242,9 +242,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .page__body {
-  min-height: 100%;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+
+  min-height: 100%;
 }
 
 .container {
@@ -276,17 +278,14 @@ input[type="checkbox"].visually-hidden {
   background-color: var(--basic-darkblue);
 }
 
-.header-top .container {
-  display: grid;
-  grid-template-columns: 220px auto 450px;
-  grid-template-areas:
-    "logo search buttons";
+.header-top__wrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .header-top__logo,
 .header-top__logo:hover,
 .header-top__logo:focus {
-  grid-area: logo;
   align-self: center;
 
   position: relative;
@@ -317,7 +316,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .search-form {
-  grid-area: search;
+  flex-grow: 1;
   align-self: center;
   position: relative;
 }
@@ -368,7 +367,6 @@ input[type="checkbox"].visually-hidden {
 }
 
 .header-top__buttons {
-  grid-area: buttons;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -478,16 +476,14 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 40px;
 }
 
-.header-center .container {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 76px;
-  grid-gap: 20px;
+.header-center__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .header-center__promo {
-  grid-column: 1/2;
-  width: 300px;
+  max-width: 300px;
   margin: 0;
   padding: 0 73px 0 30px;
 
@@ -499,12 +495,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .header-center__contacts {
-  grid-column: 2/3;
   display: flex;
   flex-direction: column;
   align-items: start;
 
-  width: 300px;
+  min-width: 300px;
   margin-top: 4px;
 
   text-align: left;
@@ -548,7 +543,6 @@ input[type="checkbox"].visually-hidden {
 }
 
 .login-form {
-  grid-column: 3/4;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -609,8 +603,6 @@ input[type="checkbox"].visually-hidden {
 }
 
 .account {
-  grid-column: 3/4;
-
   margin-top: 4px;
 }
 
@@ -2450,10 +2442,9 @@ input[type="checkbox"].visually-hidden {
 }
 /* footer-top */
 
-.footer-top .container {
+.footer-top__wrapper {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-between;*/
 
   color: var(--white);
 }
@@ -2538,7 +2529,7 @@ input[type="checkbox"].visually-hidden {
   padding-bottom: 54px;
 }
 
-.footer-center .container {
+.footer-center__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -2591,19 +2582,17 @@ input[type="checkbox"].visually-hidden {
 }
 
 /* footer-bottom */
+
 .footer-bottom {
   padding-top: 36px;
   padding-bottom: 34px;
   background-color: var(--basic-darkblue);
 }
 
-.footer-bottom .container {
-  display: grid;
-  grid-template-columns: 300px 300px 140px 140px;
-  grid-template-areas:
-    "copy social feedback developer";
-  grid-gap: 20px;
-  align-items: start;
+.footer-bottom__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   color: var(--white);
   font-size: 16px;
@@ -2611,21 +2600,25 @@ input[type="checkbox"].visually-hidden {
 }
 
 .footer-bottom__copyright {
-  grid-area: copy;
+  min-width: 300px;
+
   margin: 0;
 }
 
 .social {
-  grid-area: social;
   display: flex;
   flex-wrap: wrap;
   align-self: center;
 
-  margin: 0 auto 0 69px;
-  padding: 0;
+  min-width: 300px;
+
+  margin: 0;
+  padding: 0 70px;
 
   list-style: none;
+  box-sizing: border-box;
 }
+
 .social__item {
   margin-left: 4px;
 }
@@ -2652,7 +2645,6 @@ input[type="checkbox"].visually-hidden {
   transition: background-position 5s;
 }
 
-/*.social__button:hover,*/
 .social__button:focus,
 .social__button:active {
   background-color: var(--basic-red);
@@ -2724,23 +2716,24 @@ input[type="checkbox"].visually-hidden {
 }
 
 .feedback {
-  grid-area: feedback;
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 
-  margin: 0 auto 0 0;
+  min-width: 140px;
+  margin: 0;
 }
 
 .developer {
-  grid-area: developer;
-
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 
-  margin: 0 auto 0 29px;
+  min-width: 140px;
+  margin: 0;
+  padding-left: 29px;
+  padding-right: 13px;
+  box-sizing: border-box;
 }
 
 .feedback__link,
