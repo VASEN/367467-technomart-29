@@ -262,7 +262,7 @@ input[type="checkbox"].visually-hidden {
 
 .page__header {
   background-color: var(--basic-background);
-  margin-bottom: 59px;
+  /*margin-bottom: 59px;*/
 }
 
 .inner-page .page__header {
@@ -837,6 +837,7 @@ input[type="checkbox"].visually-hidden {
 
 .features {
   margin-bottom: 59px;
+  padding-top: 59px;
 }
 
 .features__wrapper {
