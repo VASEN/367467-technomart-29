@@ -68,6 +68,26 @@
   }
 }
 
+@keyframes drop {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateY(2000px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Переменные */
 
 :root {
@@ -1292,6 +1312,11 @@ input[type="checkbox"].visually-hidden {
   border-radius: 2px;
 }
 
+.goods__item:hover .goods__button--buy {
+  animation: drop 0.3s;
+
+}
+
 .goods__button--buy::before {
   content: "";
 
@@ -1318,7 +1343,6 @@ input[type="checkbox"].visually-hidden {
 .goods__button--add-bookmark {
   padding: 8px 31px 6px 30px;
 
-
   color: var(--basic-blue);
   font-size: 14px;
   line-height: 18px;
@@ -1328,6 +1352,10 @@ input[type="checkbox"].visually-hidden {
   border-radius: 2px;
 
   background: transparent;
+}
+
+.goods__item:hover .goods__button--add-bookmark{
+  animation: swipe 0.4s;
 }
 
 .goods__button--add-bookmark:hover,
