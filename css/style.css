@@ -476,16 +476,14 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 40px;
 }
 
-.header-center .container {
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 76px;
-  grid-gap: 20px;
+.header-center__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .header-center__promo {
-  grid-column: 1/2;
-  width: 300px;
+  max-width: 300px;
   margin: 0;
   padding: 0 73px 0 30px;
 
@@ -497,12 +495,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .header-center__contacts {
-  grid-column: 2/3;
   display: flex;
   flex-direction: column;
   align-items: start;
 
-  width: 300px;
+  min-width: 300px;
   margin-top: 4px;
 
   text-align: left;
@@ -546,7 +543,6 @@ input[type="checkbox"].visually-hidden {
 }
 
 .login-form {
-  grid-column: 3/4;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -607,8 +603,6 @@ input[type="checkbox"].visually-hidden {
 }
 
 .account {
-  grid-column: 3/4;
-
   margin-top: 4px;
 }
 
