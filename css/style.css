@@ -2528,7 +2528,7 @@ input[type="checkbox"].visually-hidden {
   padding-bottom: 54px;
 }
 
-.footer-center .container {
+.footer-center__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
