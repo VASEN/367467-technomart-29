@@ -53,6 +53,21 @@
        url('../fonts/ptsansbold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+
+  20%,40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 /* Переменные */
 
 :root {
@@ -2773,6 +2788,10 @@ input[type="checkbox"].visually-hidden {
 
 .modal__show {
   display: block;
+}
+
+.modal__shake {
+  animation: shake 0.5s;
 }
 
 .modal__overlay {
