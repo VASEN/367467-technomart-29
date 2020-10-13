@@ -1,12 +1,28 @@
-let mapOpen = document.querySelector(".about-us__mini-map");
-let map = document.querySelector(".modal-map");
-let mapClose = map.querySelector(".modal__button--close");
+const mapOpen = document.querySelector(".about-us__mini-map");
+const mapModal = document.querySelector(".modal-map");
+const mapClose = mapModal.querySelector(".modal__button--close");
+const mapOverlay = mapModal.querySelector(".modal__overlay");
 
-mapOpen.addEventListener("click", function () {
-  map.classList.add("modal__show");
+
+mapOpen.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapModal.classList.add("modal__show");
 });
 
-mapClose.addEventListener("click", function () {
-  map.classList.remove("modal__show");
+mapClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  mapModal.classList.remove("modal__show");
 });
 
+window.addEventListener("keydown", function (evt){
+  if (evt.code === "Escape" || evt.key == 27) {
+    if (mapModal.classList.contains("modal__show")) {
+      evt.preventDefault();
+      mapModal.classList.remove("modal__show");
+    }
+  }
+});
+
+mapOverlay.addEventListener("click", function () {
+  mapModal.classList.remove("modal__show");
+})
