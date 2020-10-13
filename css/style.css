@@ -2441,10 +2441,9 @@ input[type="checkbox"].visually-hidden {
 }
 /* footer-top */
 
-.footer-top .container {
+.footer-top__wrapper {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-between;*/
 
   color: var(--white);
 }
