@@ -2033,7 +2033,7 @@ input[type="checkbox"].visually-hidden {
 
   width: 23px;
   height: 23px;
-  top: -1px;
+  top: 0;
   left: 0;
 
   background-color: transparent;
