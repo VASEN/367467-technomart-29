@@ -2995,6 +2995,9 @@ input[type="checkbox"].visually-hidden {
 
   top: 0;
   left: 0;
+  width: 940px;
+  height: 449px;
+
   z-index: 0;
 }
 
