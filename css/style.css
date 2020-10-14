@@ -630,7 +630,7 @@ input[type="checkbox"].visually-hidden {
   margin-bottom: 40px;
 }
 
-.header-center__wrapper {
+.header-center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
