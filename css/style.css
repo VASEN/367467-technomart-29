@@ -2583,6 +2583,8 @@ input[type="checkbox"].visually-hidden {
   -webkit-box-sizing: border-box;
 
   box-sizing: border-box;
+
+  cursor: pointer;
 }
 
 .sort__button:hover,
@@ -2643,6 +2645,8 @@ input[type="checkbox"].visually-hidden {
   background-color: transparent;
 
   border: none;
+
+  cursor: pointer;
 }
 
 .sort__button--up:before {
