@@ -127,6 +127,7 @@
   --special-brown: #F7F3EC;
 
   --social-background: #212A3A;
+  --special-inset: #405069;
 
   --white-opacity: rgba(255, 255, 255, 0.5);
   --white-opacity-5: rgba(255, 255, 255, 0.05);
@@ -845,6 +846,7 @@ input[type="checkbox"].visually-hidden {
   flex-grow: 1;
 
   display: inline-block;
+  vertical-align: top;
 
   padding: 16px 20px 15px 20px;
 
@@ -953,6 +955,7 @@ input[type="checkbox"].visually-hidden {
 
 .features__button {
   display: inline-block;
+  vertical-align: top;
 
   min-width: 135px;
   padding: 10px 24px 10px 23px;
@@ -1031,6 +1034,7 @@ input[type="checkbox"].visually-hidden {
 
 .slider-item__link {
   display: inline-block;
+  vertical-align: top;
 
   position: absolute;
   left: 24px;
@@ -1051,6 +1055,7 @@ input[type="checkbox"].visually-hidden {
 
 .features-slider__controls > label {
   display: inline-block;
+  vertical-align: top;
 
   position: relative;
   width: 10px;
@@ -1510,7 +1515,7 @@ input[type="checkbox"].visually-hidden {
 
   border: none;
 
-  box-shadow: 0 1px 0 #293449, inset 0 1px 0 #405069;
+  box-shadow: 0 1px 0 var(--basic-darkblue), inset 0 1px 0 var(--special-inset);
 
   box-sizing: border-box;
 
@@ -1623,6 +1628,8 @@ input[type="checkbox"].visually-hidden {
 
 .services-slider__button--credit {
   display: inline-block;
+  vertical-align: top;
+
   padding: 10px 25px;
 
   color: var(--white);
@@ -1700,6 +1707,8 @@ input[type="checkbox"].visually-hidden {
 
 .about-us__button {
   display: inline-block;
+  vertical-align: top;
+
   margin: 0;
   padding: 11px 40px 9px;
 
@@ -2186,6 +2195,7 @@ input[type="checkbox"].visually-hidden {
 
 .sort {
   display: inline-block;
+  vertical-align: top;
 }
 
 .sort__menu-wrapper {
@@ -2438,6 +2448,7 @@ input[type="checkbox"].visually-hidden {
 
 .pagination__link {
   display: inline-block;
+  vertical-align: top;
 
   margin: 0;
   padding: 9px 14px;
@@ -2532,6 +2543,7 @@ input[type="checkbox"].visually-hidden {
   align-self: center;
 
   display: inline-block;
+  vertical-align: top;
 
   position: relative;
 
