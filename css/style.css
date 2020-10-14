@@ -389,7 +389,7 @@ input[type="checkbox"].visually-hidden {
   background-color: var(--basic-darkblue);
 }
 
-.header-top__wrapper {
+.header-top .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
