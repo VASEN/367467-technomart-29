@@ -2925,9 +2925,7 @@ input[type="checkbox"].visually-hidden {
 }
 /* footer-top */
 
-.footer-top__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.footer-top .container {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -3029,9 +3027,7 @@ input[type="checkbox"].visually-hidden {
   padding-bottom: 54px;
 }
 
-.footer-center__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.footer-center .container {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -3103,7 +3099,7 @@ input[type="checkbox"].visually-hidden {
   background-color: var(--basic-darkblue);
 }
 
-.footer-bottom__wrapper {
+.footer-bottom .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
