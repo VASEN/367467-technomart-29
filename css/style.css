@@ -2821,7 +2821,7 @@ input[type="checkbox"].visually-hidden {
   grid-template-columns: 220px auto;
   grid-gap: 20px;
 
-  margin-bottom: 59px;
+  padding-bottom: 59px;
 }
 
 .pagination__list {
