@@ -769,26 +769,21 @@ input[type="checkbox"].visually-hidden {
   color: var(--basic-lightgray);
 }
 
-.login-form__button--link::before {
-  content: "";
-
+.login-form__button--link-img {
   position: absolute;
   top: 14px;
   left: 19px;
   width: 21px;
   height: 17px;
-
-  background-image: url("../img/icon-login.svg");
-  background-repeat: no-repeat;
 }
 
-.login-form__button--link:hover::before,
-.login-form__button--link:focus::before {
-  background-image: url("../img/icon-login_gray.svg");
+.login-form__button:hover > .login-form__button--link-img > path,
+.login-form__button:focus > .login-form__button--link-img > path {
+  fill: var(--basic-gray);
 }
 
-.login-form__button--link:active::before {
-  background-image: url("../img/icon-login.svg");
+.login-form__button:active > .login-form__button--link-img > path {
+  fill: var(--basic-lightgray);
 }
 
 .login-form__button--registration {
@@ -827,29 +822,24 @@ input[type="checkbox"].visually-hidden {
   padding: 12px 20px 12px 56px;
 }
 
-.account__button--user::before {
-  content: "";
-
+.account__button--user > svg {
   position: absolute;
   top: 13px;
   left: 15px;
   width: 20px;
   height: 18px;
-
-  background-image: url("../img/icon-user.svg");
-  background-repeat: no-repeat;
 }
-.account__button--user:hover::before,
-.account__button--user:focus::before {
-  background-image: url("../img/icon-user_gray.svg");
+.account__button--user:hover > .account__button--user-img > path,
+.account__button--user:focus > .account__button--user-img > path {
+  fill: var(--basic-gray);
 }
 
 .account__button--user:active {
   color: var(--basic-lightgray);
 }
 
-.account__button--user:active::before {
-  background-image: url("../img/icon-user.svg");
+.account__button--user:active > .account__button--user-img > path {
+  fill: var(--basic-lightgray);
 }
 
 .account__button--logout {
@@ -858,35 +848,21 @@ input[type="checkbox"].visually-hidden {
   color: var(--basic-lightgray);
 }
 
-.account__button--logout::before {
-  content: "";
-
+.account__button--logout-img {
   position: absolute;
   top: 14px;
   left: 2px;
   width: 20px;
   height: 18px;
-
-  background-image: url("../img/icon-logout.svg");
-  background-repeat: no-repeat;
 }
 
-.account__button--logout:hover,
-.account__button--logout:focus {
-  color: var(--basic-gray);
+.account__button--logout-img:hover > path,
+.account__button--logout-img:focus > path {
+  fill: var(--basic-gray);
 }
 
-.account__button--logout:hover::before,
-.account__button--logout:focus::before {
-  background-image: url("../img/icon-logout_gray.svg");
-}
-
-.account__button--logout:active {
-  color: var(--basic-lightgray);
-}
-
-.account__button--logout:active::before {
-  background-image: url("../img/icon-logout.svg");
+.account__button--logout-img:active > path {
+  fill: var(--basic-lightgray);
 }
 
 .account__menu {
