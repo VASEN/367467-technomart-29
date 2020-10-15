@@ -2084,25 +2084,13 @@ input[type="checkbox"].visually-hidden {
   outline:none;
 }
 
-/*.breadcrumbs__item--home > .breadcrumbs__link::before {*/
-/*  content: "";*/
-
-/*  position: absolute;*/
-/*  width: 14px;*/
-/*  height: 12px;*/
-/*  left: 0;*/
-
-/*  background-image: url("../img/icon-home.svg");*/
-/*  background-repeat: no-repeat;*/
-/*}*/
-
 .breadcrumbs__item:first-child > .breadcrumbs__link:focus::before {
   outline: 5px auto -webkit-focus-ring-color;
 }
 
 .inner-page__title {
   margin: 0 0 20px;
-  padding: 29px 29px 30px 29px;
+  padding: 32px 29px 30px 29px;
 
   color: var(--basic-blue);
   font-size: 30px;
