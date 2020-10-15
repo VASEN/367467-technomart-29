@@ -23,8 +23,8 @@ try {
 feedbackOpen.addEventListener("click", function (evt) {
   evt.preventDefault();
   feedbackModal.classList.add("modal__show");
+  feedbackContent.classList.add("modal__content--show");
   if (storageName) {
-    console.log(storageName);
     feedbackName.value = storageName;
     feedbackEmail.focus();
   } else {
@@ -35,6 +35,7 @@ feedbackOpen.addEventListener("click", function (evt) {
 feedbackForm.addEventListener("submit", function (evt) {
   evt. preventDefault();
   if (!feedbackName.value || !feedbackEmail.value || !feedbackText.value) {
+    feedbackContent.classList.remove("modal__content--show");
     feedbackContent.classList.remove("modal__shake");
     feedbackContent.offsetWidth = feedbackContent.offsetWidth;
     feedbackContent.classList.add("modal__shake");
@@ -49,6 +50,7 @@ feedbackForm.addEventListener("submit", function (evt) {
 feedbackClose.addEventListener("click", function () {
   feedbackModal.classList.remove("modal__show");
   feedbackContent.classList.remove("modal__shake");
+  feedbackContent.classList.remove("modal__content--show");
 });
 
 window.addEventListener("keydown", function (evt){
@@ -57,10 +59,13 @@ window.addEventListener("keydown", function (evt){
       evt.preventDefault();
       feedbackModal.classList.remove("modal__show");
       feedbackContent.classList.remove("modal__shake");
+      feedbackContent.classList.remove("modal__content--show");
     }
   }
 });
 
 overlay.addEventListener("click", function () {
   feedbackModal.classList.remove("modal__show");
+  feedbackContent.classList.remove("modal__shake");
+  feedbackContent.classList.remove("modal__content--show");
 })

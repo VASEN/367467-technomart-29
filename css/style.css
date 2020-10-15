@@ -89,6 +89,21 @@
   }
 }
 
+@keyframes form--drop {
+  0% {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @-webkit-keyframes drop {
   0% {
     -webkit-transform: translateY(-2000px);
@@ -3352,6 +3367,10 @@ input[type="checkbox"].visually-hidden {
 .modal__shake {
   -webkit-animation: shake 0.5s;
   animation: shake 0.5s;
+}
+
+.modal__content--show {
+  animation: form--drop 0.6s;
 }
 
 .modal__overlay {
