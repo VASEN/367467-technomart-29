@@ -978,6 +978,7 @@ input[type="checkbox"].visually-hidden {
   font-weight: 700;
 
   overflow: hidden;
+  word-break: break-word;
 }
 
 .features__button {
