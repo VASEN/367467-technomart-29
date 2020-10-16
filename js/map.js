@@ -9,7 +9,6 @@ mapOpen.addEventListener("click", function (evt) {
   evt.preventDefault();
   mapModal.classList.add("modal__show");
   mapContent.classList.add("modal__content--show");
-  console.log(mapContent);
 });
 
 mapClose.addEventListener("click", function (evt) {
@@ -19,7 +18,7 @@ mapClose.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt){
-  if (evt.code === "Escape" || evt.key == 27) {
+  if (evt.code === "Escape" || evt.key === "27") {
     if (mapModal.classList.contains("modal__show")) {
       evt.preventDefault();
       mapModal.classList.remove("modal__show");

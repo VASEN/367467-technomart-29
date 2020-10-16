@@ -5,16 +5,16 @@
     <title>Каталог товаров интернет-магазина "Техномарт"</title>
     <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/min-style.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page__header inner-page__header">
-      <div class="header__top header-top">
+      <div class=" header-top">
         <div class="container">
           <a class="header-top__logo" href="index.html">
-            <img class="header-top__link" src="img/logo-technomart.svg" alt="Интернет-магазина Техномарт" width="108" height="18">
+            <img src="img/logo-technomart.svg" alt="Интернет-магазина Техномарт" width="108" height="18">
           </a>
-          <form class="header-top__search-form search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="search-form__input" type="search" name="search-field" placeholder="Поиск:" id="search-form__field">
             <label class="visually-hidden" for="search-form__field">Поиск</label>
             <svg class="search-form__icon" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 12l3.5 3.6-1.4 1.4-3.6-3.5a7.5 7.5 0 01-12-6A7.5 7.5 0 1113.5 12zm-6-10a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" fill="#fff"/></svg>
@@ -27,13 +27,13 @@
         </div>
       </div>
       <div class="container">
-        <div class="header__center header-center">
+        <div class="header-center">
           <p class="header-center__promo">Интернет-магазин строительных материалов и инструментов для ремонта</p>
           <div class="header-center__contacts">
             <a class="header-contacts__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <address class="header-contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           </div>
-          <div class="header-center__account account">
+          <div class="account">
             <div class="account__info">
               <a class="account__button account__button--user" href="#">
                 <svg class="account__button--user-img" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.88 14.17c-2.14-.74-4.25-1.67-5.2-2.4-.66-.5-.78-1.61-.52-2.4a5.49 5.49 0 001.86-4.29C14.02 2.28 12.22 0 10 0 7.78 0 5.98 2.28 5.98 5.08c0 1.8.75 3.38 1.86 4.28.26.8.14 1.92-.51 2.42-.95.72-3.07 1.65-5.21 2.39C-.03 14.9 0 18 0 18h20s.02-3.1-2.12-3.83z" fill="#C5C5C5"/></svg>
@@ -53,10 +53,8 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="header__bottom header-bottom">
-        <div class="container">
-          <nav class="header__navigation main-navigation">
+        <div class="header-bottom">
+          <nav class="main-navigation">
             <ul class="main-navigation__list">
               <li class="main-navigation__item">
                 <a class="main-navigation__link" href="index.html">Главная</a>
@@ -84,11 +82,11 @@
         </div>
       </div>
     </header>
-    <main class="page__content inner-page__content">
+    <main>
       <div class="container">
         <h1 class="visually-hidden">Каталог товаров интернет-магазина "Техномарт"</h1>
-        <ul class="page__breadcrumbs breadcrumbs">
-          <li class="breadcrumbs__item breadcrumbs__item--home">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="index.html" aria-label="Главная">
               <svg width="14" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 8v4h4V8h2v4h4V8L7 3.52 2 8z" fill="#C1C6CE"/><path d="M13.83 6.37L12 4.75V0h-2v2.99L7.33.63 7.27.6a.47.47 0 00-.08-.05.55.55 0 00-.1-.02L7 .5l-.1.02a.46.46 0 00-.09.02L6.73.6l-.06.04-6.5 5.73a.5.5 0 00.66.75L7 1.67l6.17 5.44a.5.5 0 00.66-.75z" fill="#C1C6CE"/></svg>
             </a>
@@ -104,13 +102,13 @@
           </li>
         </ul>
         <h2 class="inner-page__title">Перфораторы</h2>
-        <div class="inner-page__catalog catalog">
-          <aside class="catalog__filter filter">
+        <div class="inner-page__catalog">
+          <aside class="filter">
             <h3 class="filter__title">Фильтр:</h3>
-            <form class="filter__form" action="https://echo.htmlacademy.ru/" method="post">
-              <fieldset class="filter__section filter-section filter-section__price">
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <fieldset class="filter-section filter-section__price">
                 <h4 class="filter-section__title">Цена:</h4>
-                <div class="filter-section__price-range price-range">
+                <div class="price-range">
                   <div class="price-range__range">
                     <div class="price-range__range--current">
                       <div class="price-range__range--min"></div>
@@ -118,7 +116,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="filter__price price">
+                <div class="price">
                   <p class="price__element">
                     <label class="visually-hidden" for="min-price">Минимальная цена:</label>
                     <input type="number" name="min-price" value="100" id="min-price" min="100">
@@ -130,9 +128,9 @@
                   </p>
                 </div>
               </fieldset>
-              <fieldset class="filter__section filter-section filter-section__brands">
+              <fieldset class="filter-section filter-section__brands">
                 <h4 class="filter-section__title">Производители:</h4>
-                <ul class="filter-section__list filter-brands">
+                <ul class="filter-section__list">
                   <li class="filter-brands__item">
                     <input class="visually-hidden" type="checkbox" name="filter-brands__bosch" id="filter-brands__bosch" checked>
                     <label for="filter-brands__bosch">
@@ -185,9 +183,9 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter__section filter-section filter-section__energy">
+              <fieldset class="filter-section filter-section__energy">
                 <h4 class="filter-section__title">Питание:</h4>
-                <ul class="filter-section__list filter-energy">
+                <ul class="filter-section__list">
                   <li class="filter-energy__item">
                     <input class="visually-hidden" type="radio" name="filter-energy__type" value="battery" id="radio-1" checked>
                     <label for="radio-1">Аккумуляторные</label>
@@ -202,31 +200,21 @@
             </form>
           </aside>
           <div class="catalog__wrapper">
-            <section class="catalog__sort sort">
+            <section class="sort">
               <div class="sort__menu-wrapper">
                 <h3 class="sort__title">Сортировка:</h3>
                 <div class="sort__types-wrapper">
-                  <div class="sort__item">
-                    <button class="sort__button sort__button--current" type="button" name="sort__price">По цене</button>
-                  </div>
-                  <div class="sort__item">
-                    <button class="sort__button" type="button" name="sort__type">По типу</button>
-                  </div>
-                  <div class="sort__item">
-                    <button class="sort__button" type="button" name="sort__function">По функционалу</button>
-                  </div>
+                  <button class="sort__button sort__button--current" type="button" name="sort__price">По цене</button>
+                  <button class="sort__button" type="button" name="sort__type">По типу</button>
+                  <button class="sort__button" type="button" name="sort__function">По функционалу</button>
                 </div>
                 <div class="sort__wrapper">
-                  <div class="sort__item">
                     <button class="sort__button--up-down sort__button--up sort__button--up-down--current" type="button" name="sort__button--up" aria-label="Сортировка по возрастанию"><span class="visually-hidden">по возрастанию</span></button>
-                  </div>
-                  <div class="sort__item">
                     <button class="sort__button--up-down sort__button--down" type="button" name="sort__button--down" aria-label="Сортировка по убыванию"><span class="visually-hidden">по убыванию</span></button>
-                  </div>
                 </div>
               </div>
             </section>
-            <section class="catalog__goods goods">
+            <section class="catalog__goods">
               <h3 class="visually-hidden">Каталог перфораторов</h3>
               <ul class="goods__list">
                 <li class="goods__item">
@@ -356,63 +344,58 @@
                   </div>
                 </li>
               </ul>
+              <div class="pagination">
+                <ul class="pagination__list">
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link_current">1</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">2</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link" href="#">3</a>
+                  </li>
+                  <li class="pagination__item">
+                    <a class="pagination__link pagination__link--next" href="#">Следующая</a>
+                  </li>
+                </ul>
+              </div>
             </section>
           </div>
         </div>
-        <section class="catalog__pagination pagination">
-          <h3 class="visually-hidden">Нумерация страниц</h3>
-          <ul class="pagination__list">
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link_current">1</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">2</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link" href="#">3</a>
-            </li>
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--next" href="#">Следующая</a>
-            </li>
-          </ul>
-        </section>
       </div>
-      <section class="catalog__info catalog-info">
+      <section class="catalog-info">
         <div class="container">
           <h3 class="catalog-info__title">Пара слов о перфораторах</h3>
           <p class="catalog-info__text">Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br> Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В<br> ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
         </div>
       </section>
     </main>
-    <footer class="page__footer footer">
-      <div class="footer__top footer-top">
-        <div class="container">
+    <footer class="page__footer">
+      <div class="container">
+        <div class="footer-top">
           <a class="footer-top__logo" href="index.html">
             <img class="footer-top__link" src="img/logo-technomart.svg" alt="" width="138" height="23">
           </a>
-          <nav class="footer-navigation">
-            <ul class="footer-navigation__list">
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Компания</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Новости</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="catalog.html">Каталог</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Доставка</a>
-              </li>
-              <li class="footer-navigation__item">
-                <a class="footer-navigation__link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+          <ul class="footer-navigation__list">
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Компания</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Новости</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Доставка</a>
+            </li>
+            <li class="footer-navigation__item">
+              <a class="footer-navigation__link" href="#">Контакты</a>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div class="footer__center footer-center">
-        <div class="container">
+        <div class="footer-center">
           <div class="footer-center__contacts">
             <address class="footer-center__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             <a class="footer-center__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -433,10 +416,10 @@
           </ul>
         </div>
       </div>
-      <div class="footer__bottom footer-bottom">
+      <div class="footer-bottom">
         <div class="container">
           <p class="footer-bottom__copyright">© 2010–2019 Компания «Техномарт»<br>Все права защищены</p>
-          <ul class="footer-bottom__social social">
+          <ul class="social">
             <li class="social__item">
               <a class="social__button social__button--vk" href="#" aria-label="Ссылка на социальную сеть Вконтакте"></a>
             </li>
@@ -447,11 +430,11 @@
               <a class="social__button social__button--inst" href="#" aria-label="Ссылка на социальную сеть Инстаграмм"></a>
             </li>
           </ul>
-          <p class="footer-bottom__feedback feedback">
+          <p class="feedback">
             Обратная связь:<br>
             <a class="feedback__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
-          <p class="footer-bottom__developer developer">
+          <p class="developer">
             Разработано — <br>
             <a class="developer__link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </p>
