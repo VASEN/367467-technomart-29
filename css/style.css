@@ -1926,9 +1926,12 @@ input[type="checkbox"].visually-hidden {
   cursor: pointer;
 }
 
-.price-range__range--min::before {
-  content: "";
+.price-range__range--min:focus,
+.price-range__range--max:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+}
 
+.price-range__range--min {
   position: absolute;
   top: -9px;
   left: 0;
@@ -1941,9 +1944,7 @@ input[type="checkbox"].visually-hidden {
   border-radius: 50%;
 }
 
-.price-range__range--max::before {
-  content: "";
-
+.price-range__range--max {
   position: absolute;
   top: -9px;
   right: 0;
