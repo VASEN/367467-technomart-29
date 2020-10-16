@@ -962,7 +962,7 @@ input[type="checkbox"].visually-hidden {
   cursor: default;
 }
 
-.features__item--wrapper {
+.features__item-wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -978,8 +978,6 @@ input[type="checkbox"].visually-hidden {
   font-weight: 700;
 
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .features__button {
@@ -1064,6 +1062,10 @@ input[type="checkbox"].visually-hidden {
 
 .slider-item__info {
   margin: 0;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .slider-item__link {
