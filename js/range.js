@@ -1,6 +1,6 @@
 const priceFieldset = document.querySelector(".filter-section__price");
 
-let priceRange = priceFieldset.querySelector(".price-range");
+let priceRange = priceFieldset.querySelector(".price-range__range");
 
 let priceMinPointer = priceFieldset.querySelector(".price-range__range--min");
 let priceMaxPointer = priceFieldset.querySelector(".price-range__range--max");
@@ -9,6 +9,10 @@ let priceMinInput = priceFieldset.querySelector("#min-price");
 
 let priceClientCoords = priceRange.getBoundingClientRect(); // координаты полоски диапазона
 let priceCoords = {};
+
+console.log(priceClientCoords);
+// console.log(scrollY);
+// console.log(scrollX);
 
 priceCoords.top = priceClientCoords.top + scrollY;
 console.log(priceCoords.top);
@@ -26,6 +30,7 @@ priceMinPointer.addEventListener("mousedown", function (evt) {
   priceMinPointerCoords.left = priceMinPointerClientCoords.left + scrollX;
   console.log(priceMinPointerCoords.left);
 
+  debugger;
   let right = priceRange.offsetWidth - priceMinPointer.offsetWidth;
   console.log(right);
 
