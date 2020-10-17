@@ -1285,7 +1285,7 @@ input[type="checkbox"].visually-hidden {
   justify-content: space-between;
   flex-grow: 1;
 
-  padding: 10px 17px 21px 18px;
+  padding: 10px 17px 20px 18px;
 }
 
 .goods__title {
@@ -2510,8 +2510,8 @@ input[type="checkbox"].visually-hidden {
 /* catalog__info */
 
 .catalog-info {
-  padding-top: 64px;
-  padding-bottom: 68px;
+  padding-top: 65px;
+  padding-bottom: 69px;
 
   color: var(--black);
 
@@ -2634,7 +2634,7 @@ input[type="checkbox"].visually-hidden {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  padding-top: 29px;
+  padding-top: 27px;
   padding-left: 3px;
   padding-bottom: 54px;
 
