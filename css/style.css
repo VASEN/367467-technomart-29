@@ -1,56 +1,56 @@
 /* FONTS */
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 400;
-  src: local('Cuprum Regular'), local('Cuprum-Regular'),
-  url('../fonts/cuprum.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cuprum.woff') format('woff'); /* Modern Browsers */
+  src: local("Cuprum Regular"), local("Cuprum-Regular"),
+  url("../fonts/cuprum.woff2") format("woff2"), /* Super Modern Browsers */
+  url("../fonts/cuprum.woff") format("woff"); /* Modern Browsers */
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 400;
-  src: local('Cuprum Italic'), local('Cuprum-Italic'),
-  url('../fonts/cuprumitalic.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cuprumitalic.woff') format('woff'); /* Modern Browsers */
+  src: local("Cuprum Italic"), local("Cuprum-Italic"),
+  url("../fonts/cuprumitalic.woff2") format("woff2"), /* Super Modern Browsers */
+  url("../fonts/cuprumitalic.woff") format("woff"); /* Modern Browsers */
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 700;
-  src: local('Cuprum Bold'), local('Cuprum-Bold'),
-  url('../fonts/cuprumbold.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cuprumbold.woff') format('woff'); /* Modern Browsers */
+  src: local("Cuprum Bold"), local("Cuprum-Bold"),
+  url("../fonts/cuprumbold.woff2") format("woff2"), /* Super Modern Browsers */
+  url("../fonts/cuprumbold.woff") format("woff"); /* Modern Browsers */
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 700;
-  src: local('Cuprum Bold Italic'), local('Cuprum-BoldItalic'),
-  url('../fonts/cuprumbolditalic.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cuprumbolditalic.woff') format('woff'); /* Modern Browsers */
+  src: local("Cuprum Bold Italic"), local("Cuprum-BoldItalic"),
+  url("../fonts/cuprumbolditalic.woff2") format("woff2"), /* Super Modern Browsers */
+  url("../fonts/cuprumbolditalic.woff") format("woff"); /* Modern Browsers */
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: local('PT Sans'), local('PTSans-Regular'),
-  url('../fonts/ptsans.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url('../fonts/ptsans.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local("PT Sans"), local("PTSans-Regular"),
+  url("../fonts/ptsans.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/ptsans.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: local('PT Sans Bold'), local('PTSans-Bold'),
-  url('../fonts/ptsansbold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url('../fonts/ptsansbold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local("PT Sans Bold"), local("PTSans-Bold"),
+  url("../fonts/ptsansbold.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url("../fonts/ptsansbold.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 @keyframes shake {
@@ -143,6 +143,8 @@
 
   --social-background: #212A3A;
   --special-inset: #405069;
+
+  --special-slider: #917f6e;
 
   --white-opacity: rgba(255, 255, 255, 0.5);
   --white-opacity-5: rgba(255, 255, 255, 0.05);
@@ -1031,7 +1033,10 @@ input[type="checkbox"].visually-hidden {
   display: none;
 
   position: relative;
+  max-width: 620px;
   max-height: 266px;
+
+  background-color: var(--special-slider);
 }
 
 .features-slider__item > img {
@@ -1292,7 +1297,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   padding-bottom: 8px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
@@ -1302,7 +1307,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0 auto 13px;
 
   color: var(--special-gray);
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
@@ -1316,7 +1321,7 @@ input[type="checkbox"].visually-hidden {
   padding: 10px 24px 10px 32px;
 
   color: var(--white);
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 700;
@@ -1507,7 +1512,7 @@ input[type="checkbox"].visually-hidden {
 .services__info {
   margin: 0 0 23px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -1657,7 +1662,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   padding: 0;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 
@@ -1704,7 +1709,7 @@ input[type="checkbox"].visually-hidden {
 .about-us__content {
   margin: 0 0 26px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
 }
 
@@ -1715,7 +1720,7 @@ input[type="checkbox"].visually-hidden {
 .about-us__delivery {
   margin: 0 0 3px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
 }
 
@@ -1761,7 +1766,9 @@ input[type="checkbox"].visually-hidden {
 }
 
 .about-us__button_contacts {
-  width: 100%;
+  display: block;
+  padding: 11px 40px;
+  text-align: center;
 }
 
 .about-us__mini-map {
@@ -1791,7 +1798,7 @@ input[type="checkbox"].visually-hidden {
   padding: 21px 0 17px;
 
   color: var(--black);
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1858,7 +1865,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   padding: 9px 18px 10px 18px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -1899,7 +1906,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   padding-bottom: 0;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -1948,9 +1955,12 @@ input[type="checkbox"].visually-hidden {
   cursor: pointer;
 }
 
-.price-range__range--min::before {
-  content: "";
+.price-range__range--min:focus,
+.price-range__range--max:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+}
 
+.price-range__range--min {
   position: absolute;
   top: -9px;
   left: 0;
@@ -1963,9 +1973,7 @@ input[type="checkbox"].visually-hidden {
   border-radius: 50%;
 }
 
-.price-range__range--max::before {
-  content: "";
-
+.price-range__range--max{
   position: absolute;
   top: -9px;
   right: 0;
@@ -1995,7 +2003,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   padding: 10px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   text-align: center;
@@ -2047,7 +2055,7 @@ input[type="checkbox"].visually-hidden {
 .filter-energy__item > label {
   padding-left: 35px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 15px;
   line-height: 19px;
   text-transform: uppercase;
@@ -2184,7 +2192,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0 auto;
   padding: 9px 10px;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2227,7 +2235,7 @@ input[type="checkbox"].visually-hidden {
   margin: 0;
   padding: 0 120px 0 0;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -2258,7 +2266,7 @@ input[type="checkbox"].visually-hidden {
   padding: 0;
 
   color: var(--black-opacity-30);
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 14px;
   text-transform: uppercase;
@@ -2319,7 +2327,7 @@ input[type="checkbox"].visually-hidden {
 
   font-size: 13px;
   color: var(--black-opacity-30);
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   line-height: 17px;
   text-transform: uppercase;
 
@@ -2445,7 +2453,7 @@ input[type="checkbox"].visually-hidden {
   padding: 0;
 
   color: var(--black);
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -2532,7 +2540,7 @@ input[type="checkbox"].visually-hidden {
 .catalog-info__text {
   margin: 0;
 
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
 }
 
@@ -2955,7 +2963,7 @@ input[type="checkbox"].visually-hidden {
 .feedback-form__element > input[type="email"],
 .feedback-form__element > textarea {
   color: inherit;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 
