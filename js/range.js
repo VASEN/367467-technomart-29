@@ -1,142 +1,185 @@
 const priceFieldset = document.querySelector(".filter-section__price");
 
+// Координаты диапазона цены
 let priceRange = priceFieldset.querySelector(".price-range__range");
-let priceRangeCoords = priceRange.getBoundingClientRect(); // координаты полоски диапазона
-let startRangeCoords = {};
-startRangeCoords.startX = priceRangeCoords.left + scrollX;
-startRangeCoords.startY = priceRangeCoords.top + scrollY;
+let priceRangeCoords = getCoords(priceRange);
+console.log("PRICE_RANGE");
+console.log(priceRangeCoords);
 
-let endRangeCoords = {};
-endRangeCoords.endX = startRangeCoords.startX + priceRangeCoords.width;
-endRangeCoords.endY = startRangeCoords.startY;
-
-console.log(startRangeCoords);
-console.log(endRangeCoords);
-
+// Координаты выбранного текущего диапазона
 let currentRange = priceFieldset.querySelector(".price-range__range--current");
-let currentRangeCoords = currentRange.getBoundingClientRect();
-let startCurrentCoords = {};
-startCurrentCoords.startX = currentRangeCoords.left + scrollX;
-startCurrentCoords.startY = currentRangeCoords.top + scrollY;
+let currentRangeCoords = getCoords(currentRange);
+console.log("CURRENT_RANGE");
+console.log(currentRangeCoords.width);
 
-let endCurrentCoords = {};
-endCurrentCoords.endX = startCurrentCoords.startX + currentRangeCoords.width;
-endCurrentCoords.endY = startCurrentCoords.startY;
-
-
+// Полхунок с минимальной ценой
 let priceMinPointer = priceFieldset.querySelector(".price-range__range--min"); //ползунок min
 let priceMinPointerCoords = "";
-let priceMinPointerStartCoords = {};
 
-
+// Ползунок с максимальной ценой
 let priceMaxPointer = priceFieldset.querySelector(".price-range__range--max"); //ползунок max
 let priceMaxPointerCoords = "";
-let priceMaxPointerStartCoords = {};
 
-
-const minPrice = 0;
-const maxPrice = 100000;
-let pointerStep = (endRangeCoords.endX - startRangeCoords.startX) / (maxPrice - minPrice);
-console.log(pointerStep);
-
+// Переменные ограничивающие диапазон цен
+let minPrice = "";
+let maxPrice = "";
 let priceMinInput = priceFieldset.querySelector("#min-price");
-priceMinInput.value = Math.floor((startCurrentCoords.startX - startRangeCoords.startX) / pointerStep);
-
 let priceMaxInput = priceFieldset.querySelector("#max-price");
-priceMaxInput.value = Math.floor((endCurrentCoords.endX - startRangeCoords.startX) / pointerStep);
 
+function getMinMax (min= 0, max = 10000) {
+  minPrice = min;
+  maxPrice = max;
+  getPointerStep();
+  priceMinInput.value = minPrice;
+  priceMaxInput.value = Math.floor(currentRangeCoords.width / pointerStep);
+}
 
-let isMouseDown = false;
-let isMinPointer = false;
-let isMaxPointer = false;
+// Шаг диапазона
+let pointerStep = "";
 
-let minShift = ""; // сдвиг при нажатии на ползунок
+function getPointerStep() {
+  pointerStep = (priceRangeCoords.endX - priceRangeCoords.startX) / (maxPrice - minPrice);
+  // console.log("STEP => " + pointerStep);
+}
+
+// Маркер нажатия мыши
+let isMinDown = false;
+let isMaxDown = false;
+
+// Переменные
+let positionMinX = ""; //
+let positionMaxX = "";
+let minShift = ""; // сдвиг при нажатии на ползунок MIN
 let maxShift = "";
+let valueMin = 0;
+let valueMax = 0;
 
-let newX = "";
-let positionX = "";
+
+//
+if (priceFieldset) {
+  getMinMax();
+  priceMinPointer.style.left = (priceMinPointer.style.left - 10) + "px";
+  priceMaxPointer.style.left = (currentRangeCoords.width - 10) + "px";
+}
+
 
 priceMinPointer.addEventListener("mousedown", function (evt) {
-  priceMinPointer.focus()
-  isMouseDown = true;
-  isMinPointer = true;
-
-  priceMinPointerCoords = priceMinPointer.getBoundingClientRect();
-  priceMinPointerStartCoords.startX = priceMinPointerCoords.left;
-  priceMinPointerStartCoords.endX = priceMinPointerCoords.left + priceMinPointerCoords.width;
-  console.log("START_MIN_X => " + priceMinPointerStartCoords.startX);
-  console.log("END_MIN_X => " + priceMinPointerStartCoords.endX);
-// console.log("EVT.X => " + evt.x);
-  minShift = evt.x - priceMinPointerStartCoords.startX;
-  console.log("SHIFT => " + minShift);
-});
-
-priceMaxPointer.addEventListener("mousedown", function (evt) {
-  priceMaxPointer.focus();
-  isMouseDown = true;
-  isMaxPointer = true;
-
-  priceMaxPointerCoords = priceMaxPointer.getBoundingClientRect();
-  priceMaxPointerStartCoords.startX = priceMaxPointerCoords.left;
-  priceMaxPointerStartCoords.endX = priceMaxPointerCoords.left + priceMaxPointerCoords.width;
-  console.log("START_MAX_X => " + priceMaxPointerStartCoords.startX);
-  console.log("END_MAX_X => " + priceMaxPointerStartCoords.endX);
-
-  maxShift = evt.x - priceMaxPointerStartCoords.startX;
-  console.log("SHIFT => " + maxShift);
+  isMinDown = true;
+  minShift = evt.offsetX ; // CLIENT.X => Координата Х, переданная при нажатии мышки
+  console.log("minShift => " + minShift);
 });
 
 priceMinPointer.addEventListener("mousemove", function (evt) {
-  if (isMouseDown === true || isMinPointer === true) {
-    newX = evt.x;
+  if (isMinDown === true) {
 
-    // console.log(priceRangeCoords.x + "=>" + newX);
-    positionX = newX - startRangeCoords.startX - minShift;
-    // debugger;
-    let valueMin = "";
-    if (positionX <= 0) {
-      newX = startRangeCoords.startX;
-      priceMinPointer.style.left = "0";
+    currentRangeCoords = getCoords(currentRange);
+    // console.log("currentRangeCoords");
+    // console.log(currentRangeCoords);
+
+    priceMinPointerCoords = getCoords(priceMinPointer);
+    // console.log("priceMinPointerCoords")
+    // console.log(priceMinPointerCoords);
+
+    positionMinX = evt.clientX - priceRangeCoords.startX - minShift;
+    if (positionMinX <= -10) {
+      priceMinPointer.style.left = "-10px";
       priceMinInput.value = 0;
-      // debugger;
-    } else if (positionX >= (currentRangeCoords.width - priceMaxPointerCoords.width - priceMinPointerCoords.width)) {
-      priceMinPointer.style.left = (currentRangeCoords.width - priceMaxPointerCoords.width - priceMinPointerCoords.width) + "px";
-      valueMin = positionX;
+    }
+    else {
+      valueMin += evt.movementX;
+      priceMinPointer.style.left = valueMin - 10 + "px";
+      // console.log("VALUE_MIN => " + valueMin);
       priceMinInput.value = Math.floor(valueMin / pointerStep);
-    } else {
-      valueMin = positionX;
-        priceMinPointer.style.left = (valueMin) + "px";
-        priceMinInput.value = Math.floor(valueMin / pointerStep);
+      currentRange.style.width = currentRangeCoords.width - evt.movementX + "px";
+      // console.log(currentRange.style.width);
+      // console.log(currentRangeCoords.width);
+      currentRange.style.marginLeft = (valueMin) + "px";
       }
-    // debugger;
-    console.log(priceMinPointer.style.left);
-  }
-});
-
-priceMaxPointer.addEventListener("mousemove", function (evt) {
-  if (isMouseDown === true || isMaxPointer === true) {
-    let maxValue = "";
-    newX = evt.x;
-    positionX = newX - currentRangeCoords.width - maxShift;
-    maxValue = positionX;
-    // debugger;
-    priceMaxPointer.style.left = maxValue + "px";
   }
 });
 
 priceMinPointer.addEventListener("mouseup", function (evt){
-  // debugger;
-  isMouseDown = false;
-  isMinPointer = false;
+  isMinDown = false;
+});
 
-  priceMinPointer.removeEventListener("mousemove", function (evt) {});
-  priceMinPointer.removeEventListener("mousedown", function (evt) {});
+priceMaxPointer.addEventListener("mousedown", function (evt) {
+  isMaxDown = true;
+  maxShift = evt.offsetX;
+});
+
+priceMaxPointer.addEventListener("mousemove", function (evt) {
+  if (isMaxDown) {
+    currentRangeCoords = getCoords(currentRange);
+    console.log("currentRangeCoords");
+    console.log(currentRangeCoords);
+
+    priceMaxPointerCoords = getCoords(priceMaxPointer);
+    console.log("priceMinPointerCoords")
+    console.log(priceMaxPointerCoords);
+
+    positionMaxX = evt.clientX - priceRangeCoords.startX - maxShift - 10;
+    if (positionMaxX >= 160) {
+      priceMaxInput.value = 10000;
+      priceMaxPointer.style.left = "170px";
+    } else {
+      valueMax = currentRangeCoords.endX - priceRangeCoords.startX + evt.movementX;
+      priceMaxPointer.style.left = valueMax - 10 + "px";
+      currentRange.style.width = currentRangeCoords.width + evt.movementX + "px";
+      priceMaxInput.value = Math.floor(valueMax / pointerStep);
+    }
+  }
 });
 
 priceMaxPointer.addEventListener("mouseup", function (evt) {
-  isMouseDown = false;
-  isMaxPointer = false;
-
-  priceMaxPointer.removeEventListener("mousemove", function (evt) {});
-  priceMaxPointer.removeEventListener("mousedown", function (evt) {});
+  isMaxDown = false;
+  // console.log("Длина при отжатии MAX => " + currentRange.style.width);
+  // currentRangeCoords = getCoords(currentRange);
 });
+
+
+
+priceMinInput.addEventListener("input", function (evt) {
+  currentRangeCoords = getCoords(currentRange);
+  let x = parseInt(priceMinInput.value);
+  let y = parseInt(priceMaxInput.value);
+  if ( x >= 0 && x < y) {
+    currentRange.style.width = currentRangeCoords.width - Math.round(x * pointerStep) + "px";
+    currentRange.style.marginLeft = Math.round(x * pointerStep) + "px";
+    priceMinPointer.style.left = Math.round(x * pointerStep) - 10 + "px";
+  } else if (x > y) {
+    x = y;
+    priceMinInput.value = y;
+    currentRange.style.width = currentRangeCoords.width - Math.round(x * pointerStep) + "px";
+    currentRange.style.marginLeft = Math.round(x * pointerStep) + "px";
+    priceMinPointer.style.left = Math.round(x * pointerStep) - 10 + "px";
+  }
+});
+
+priceMaxInput.addEventListener("input", function (evt) {
+  currentRangeCoords = getCoords(currentRange);
+  let x = parseInt(priceMinInput.value);
+  let y = parseInt(priceMaxInput.value);
+
+  console.log(Math.round(y * pointerStep));
+  console.log(Math.round(x * pointerStep));
+  if (y >= maxPrice) {
+    y = maxPrice;
+    priceMaxInput.value = maxPrice;
+    currentRange.style.width = Math.round(y * pointerStep) - Math.round(x * pointerStep) + "px";
+    priceMaxPointer.style.left = Math.round(y * pointerStep) - 10 + "px";
+  } else {
+    currentRange.style.width = Math.round(y * pointerStep) - Math.round(x * pointerStep) + "px";
+    priceMaxPointer.style.left = Math.round(y * pointerStep) - 10 + "px";
+  }
+});
+
+function getCoords(element) {
+  let coords = element.getBoundingClientRect();
+  let allCoords = {};
+  allCoords.startX = coords.left + scrollX;
+  allCoords.startY = coords.top + scrollY;
+  allCoords.endX = coords.left + scrollX + coords.width;
+  allCoords.endY = allCoords.startY;
+  allCoords.width = coords.width;
+  return allCoords;
+}

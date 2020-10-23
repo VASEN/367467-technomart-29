@@ -1907,6 +1907,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .price-range__range {
+  position: relative;
   width: 180px;
   height: 2px;
 
@@ -1914,7 +1915,6 @@ input[type="checkbox"].visually-hidden {
 }
 
 .price-range__range--current {
-  position: relative;
   width: 132px;
   height: 2px;
 
