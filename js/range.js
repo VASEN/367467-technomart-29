@@ -3,14 +3,14 @@ const priceFieldset = document.querySelector(".filter-section__price");
 // Координаты диапазона цены
 let priceRange = priceFieldset.querySelector(".price-range__range");
 let priceRangeCoords = getCoords(priceRange);
-console.log("PRICE_RANGE");
-console.log(priceRangeCoords);
+// console.log("PRICE_RANGE");
+// console.log(priceRangeCoords);
 
 // Координаты выбранного текущего диапазона
 let currentRange = priceFieldset.querySelector(".price-range__range--current");
 let currentRangeCoords = getCoords(currentRange);
-console.log("CURRENT_RANGE");
-console.log(currentRangeCoords.width);
+// console.log("CURRENT_RANGE");
+// console.log(currentRangeCoords.width);
 
 // Полхунок с минимальной ценой
 let priceMinPointer = priceFieldset.querySelector(".price-range__range--min"); //ползунок min
@@ -66,7 +66,7 @@ if (priceFieldset) {
 priceMinPointer.addEventListener("mousedown", function (evt) {
   isMinDown = true;
   minShift = evt.offsetX ; // CLIENT.X => Координата Х, переданная при нажатии мышки
-  console.log("minShift => " + minShift);
+  // console.log("minShift => " + minShift);
 });
 
 priceMinPointer.addEventListener("mousemove", function (evt) {
@@ -160,8 +160,8 @@ priceMaxInput.addEventListener("input", function (evt) {
   let x = parseInt(priceMinInput.value);
   let y = parseInt(priceMaxInput.value);
 
-  console.log(Math.round(y * pointerStep));
-  console.log(Math.round(x * pointerStep));
+  // console.log(Math.round(y * pointerStep));
+  // console.log(Math.round(x * pointerStep));
   if (y >= maxPrice) {
     y = maxPrice;
     priceMaxInput.value = maxPrice;
