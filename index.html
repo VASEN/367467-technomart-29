@@ -79,35 +79,35 @@
           <h2 class="visually-hidden">Преимущества и товары</h2>
           <div class="features__wrapper">
             <div class="features__item new-item">
-              <div>
+              <div class="features__item-wrapper">
                 <h3 class="features__item--title">Материалы</h3>
                 <a href="#" class="features__button">На любой вкус</a>
               </div>
               <img src="img/icon-1.svg" width="44" height="65" alt="Материалы">
             </div>
             <div class="features__item">
-              <div>
+              <div class="features__item-wrapper">
                 <h3 class="features__item--title">Инструмент</h3>
                 <a href="#" class="features__button">На все случаи</a>
               </div>
               <img src="img/icon-2.svg" width="75" height="61" alt="Инструмент">
             </div>
             <div class="features__item">
-              <div>
+              <div class="features__item-wrapper">
                 <h3 class="features__item--title">Техника</h3>
                 <a href="#" class="features__button">Для стройки</a>
               </div>
               <img src="img/icon-3.svg" width="78" height="62" alt="Техника">
             </div>
             <div class="features__item">
-              <div>
+              <div class="features__item-wrapper">
                 <h3 class="features__item--title">Скидки 50%</h3>
                 <a href="#" class="features__button">На 350 товаров</a>
               </div>
               <img src="img/icon-4.svg" width="59" height="72" alt="Скидки 50%">
             </div>
             <div class="features__item">
-              <div>
+              <div class="features__item-wrapper">
                 <h3 class="features__item--title">Доставка</h3>
                 <a href="#" class="features__button">Бесплатно</a>
               </div>
@@ -122,7 +122,7 @@
               </div>
               <div class="features-slider__list">
                 <div class="features-slider__item" id="slide-1">
-                  <img src="img/features__slider-1.jpg" width="620" height="266" alt="Перфораторы">
+                  <img src="img/features-slider-1.jpg" width="620" height="266" alt="Перфораторы">
                   <div class="slider-item__wrapper">
                     <h3 class="slider-item__title">Перфораторы</h3>
                     <p class="slider-item__info">Настоящие мужские игрушки</p>
@@ -130,7 +130,7 @@
                   <a class="button slider-item__link" href="catalog.html">Открыть каталог</a>
                 </div>
                 <div class="features-slider__item" id="slide-2">
-                  <img src="img/features__slider-2.jpg" width="620" height="266" alt="Дрели">
+                  <img src="img/features-slider-2.jpg" width="620" height="266" alt="Дрели">
                   <div class="slider-item__wrapper">
                     <h3 class="slider-item__title">Дрели</h3>
                     <p class="slider-item__info">Соседям на радость!</p>
@@ -161,8 +161,8 @@
                 <span class="goods__price">25500 Р.</span>
               </div>
               <div class="goods__button-wrapper">
-                <button class="button goods__button--buy" type="button" name="button--buy">Купить</button>
-                <button class="button goods__button--add-bookmark" type="button" name="button--add-bookmark">В закладки</button>
+                <a href="#" class="button goods__button--buy">Купить</a>
+                <a href="#" class="button goods__button--add-bookmark">В закладки</a>
               </div>
             </li>
             <li class="goods__item new-item">
@@ -175,8 +175,8 @@
                 <span class="goods__price">15500 Р.</span>
               </div>
               <div class="goods__button-wrapper">
-                <button class="button goods__button--buy" type="button" name="button--buy">Купить</button>
-                <button class="button goods__button--add-bookmark" type="button" name="button--add-bookmark">В закладки</button>
+                <a href="#" class="button goods__button--buy">Купить</a>
+                <a href="#" class="button goods__button--add-bookmark">В закладки</a>
               </div>
             </li>
             <li class="goods__item">
@@ -189,8 +189,8 @@
                 <span class="goods__price">25500 Р.</span>
               </div>
               <div class="goods__button-wrapper">
-                <button class="button goods__button--buy" type="button" name="button--buy">Купить</button>
-                <button class="button goods__button--add-bookmark" type="button" name="button--add-bookmark">В закладки</button>
+                <a href="#" class="button goods__button--buy">Купить</a>
+                <a href="#" class="button goods__button--add-bookmark">В закладки</a>
               </div>
             </li>
             <li class="goods__item new-item">
@@ -202,8 +202,8 @@
                 <span class="goods__price">12500 Р.</span>
               </div>
               <div class="goods__button-wrapper">
-                <button class="button goods__button--buy" type="button" name="button--buy">Купить</button>
-                <button class="button goods__button--add-bookmark" type="button" name="button--add-bookmark">В закладки</button>
+                <a href="#" class="button goods__button--buy">Купить</a>
+                <a href="#" class="button goods__button--add-bookmark">В закладки</a>
               </div>
             </li>
           </ul>
@@ -233,7 +233,7 @@
             </li>
             <li class="brands__item">
               <a class="brands__link" href="#">
-                <img src="img/Interskol.png" alt="Интерскол" width="200" height="76">
+                <img src="img/interskol.png" alt="Интерскол" width="200" height="76">
               </a>
             </li>
             <li class="brands__item">
@@ -305,8 +305,10 @@
           <div>
             <h2 class="about-us__title">Контакты</h2>
             <p class="about-us__content contacts-content">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-            <img class="about-us__mini-map" src="img/mini_map.png" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
-            <button class="button about-us__button about-us__button_contacts" type="button" name="contacts-buttons">Заблудились? Напишите нам!</button>
+            <a href="https://www.google.ru/maps/place/Большая+Конюшенная+ул.,+19%2F8,+Санкт-Петербург,+191186/@59.9387192,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474?hl=ru" target="_blank">
+              <img class="about-us__mini-map" src="img/mini-map.png" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
+            </a>
+            <a href="#" class="button about-us__button about-us__button_contacts">Заблудились? Напишите нам!</a>
           </div>
         </div>
       </section>
@@ -315,7 +317,7 @@
       <div class="container">
         <div class="footer-top">
           <a class="footer-top__logo">
-            <img class="footer-top__link" src="img/logo-technomart.svg" alt="" width="138" height="23">
+            <img class="footer-top__link" src="img/logo-technomart.svg" alt="Интернет-магазина Техномарт" width="138" height="23">
           </a>
           <ul class="footer-navigation__list">
             <li class="footer-navigation__item">
@@ -417,7 +419,7 @@
         <button class="modal__button--close" type="button" name="modal__button--close" aria-label="Закрыть"></button>
       </div>
     </section>
-  <script src="js/feedback.js"></script>
+  <script src="js/min-feedback.js"></script>
   <script src="js/min-map.js"></script>
   <script src="js/min-services-slider.js"></script>
   <script src="js/min-features-slider.js"></script>
